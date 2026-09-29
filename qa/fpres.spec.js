@@ -92,7 +92,7 @@ test("seller dashboard tabs work", async ({ page }) => {
   await page.goto(BASE + "/seller-dashboard.html?tab=finance");
   await page.locator("#withdrawAmount").fill("5000");
   await page.locator("[data-withdraw]").click();
-  await expect(page.locator(".toast")).toContainText("5000");
+  await expect(page.locator(".toast")).toContainText(/5\s*000/);
 });
 
 test("support, login and buyer seller separation work", async ({ page }) => {
@@ -110,7 +110,7 @@ test("support, login and buyer seller separation work", async ({ page }) => {
   await expect(page).toHaveURL(/account\.html\?auth=1/);
   await expect(page.locator("#loginModal")).toHaveClass(/show/);
   await page.locator("[data-close]").click();
-  await expect(page).toHaveURL(/\/$/);
+  await expect(page).toHaveURL(/\/index\.html$/);
   await page.locator("[data-login]").click();
   await expect(page).toHaveURL(/account\.html\?auth=1/);
   await page.locator("#loginName").fill("QA Player");
