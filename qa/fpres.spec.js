@@ -53,6 +53,10 @@ test("favorite flow works from catalog to account", async ({ page }) => {
   const favorite = page.locator(".favGame:not(.active)").first();
   const id = await favorite.getAttribute("data-fav-game");
   await favorite.click();
+  await page.goto(BASE + "/account.html?auth=1");
+  await page.locator("#loginName").fill("QA Buyer");
+  await page.locator("#loginEmail").fill("buyer@fpres.local");
+  await page.locator("[data-enter]").click();
   await page.goto(BASE + "/account.html?tab=favorites");
   await expect(page.locator(`[data-fav-game="${id}"]`)).toBeVisible();
 });
