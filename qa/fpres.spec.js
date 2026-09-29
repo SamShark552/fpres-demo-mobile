@@ -50,7 +50,7 @@ test("catalog search, platform, category and sort controls work", async ({ page 
 
 test("favorite flow works from catalog to account", async ({ page }) => {
   await page.goto(BASE + "/catalog.html");
-  const favorite = page.locator("[data-fav-game]").first();
+  const favorite = page.locator(".favGame:not(.active)").first();
   const id = await favorite.getAttribute("data-fav-game");
   await favorite.click();
   await page.goto(BASE + "/account.html?tab=favorites");
