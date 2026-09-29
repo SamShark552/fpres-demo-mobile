@@ -33,3 +33,5 @@
 @media(max-width:640px){.sellerHeaderLink{height:38px;padding:0 9px;font-size:10px}.actions{gap:6px}}
 
 .sideLogout{width:100%;margin-top:8px;height:38px;border:1px solid #2d3747;background:#0b121b;border-radius:10px;color:#8f9aad;font:inherit;font-size:11px;cursor:pointer;text-align:left;padding:0 11px}.sideLogout:hover{color:#fff;border-color:#5a45a0;background:#151326}
+
+.sellerAuth{max-width:620px;margin:40px auto;padding:26px}.sellerAuth .pageTitle{margin-bottom:8px}.sellerAuth .dashIcon{margin-bottom:12px;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:#161326;color:#a996ff;border:1px solid #3a315b}
