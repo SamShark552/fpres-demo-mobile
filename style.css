@@ -304,3 +304,69 @@ body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;back
   .desktopContentGrid{display:block}
   .desktopContentGrid>.gameGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
+
+/* ===== FPRES DESKTOP HOMEPAGE V2 ===== */
+.desktopHome{padding-bottom:34px}
+.desktopHero{padding:26px 0 8px}
+.desktopHeroGrid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px}
+.desktopHeroMain{position:relative;min-height:330px;overflow:hidden;border:2px solid #1E1B4B;border-radius:24px;background:#1E1B4B;box-shadow:0 16px 34px rgba(30,27,75,.16)}
+.desktopHeroImage{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.72}
+.desktopHeroMain:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,17,47,.98) 0%,rgba(30,27,75,.92) 34%,rgba(30,27,75,.28) 72%,rgba(30,27,75,.05) 100%),linear-gradient(0deg,rgba(20,17,47,.36),transparent 55%)}
+.desktopHeroCopy{position:relative;z-index:1;padding:38px 40px;min-height:330px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;color:#fff}
+.desktopEyebrow{display:inline-flex;padding:6px 10px;border-radius:999px;background:#A3E635;color:#1E1B4B;font-size:10px;font-weight:950;letter-spacing:.08em;margin-bottom:14px}
+.desktopHeroTitle{margin:0 0 12px;font-size:clamp(42px,4.5vw,68px);line-height:.94;letter-spacing:-.045em;font-weight:950;color:#fff}
+.desktopHeroTitle span{display:block;color:#fff!important}
+.desktopHeroTitle em{display:block;font-style:normal;color:#A3E635!important}
+.desktopHeroCopy p{margin:0 0 4px;font-size:16px;color:#fff;font-weight:800}
+.desktopHeroCopy>span{font-size:13px;color:rgba(255,255,255,.72)}
+.desktopHeroActions{margin-top:24px}
+.desktopHeroActions .btn{min-height:46px;padding:0 19px}
+.desktopPromoStack{display:grid;grid-template-rows:repeat(3,1fr);gap:12px}
+.desktopPromo{min-height:102px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 19px;border:2px solid #1E1B4B;border-radius:20px;text-decoration:none;box-shadow:0 12px 26px rgba(30,27,75,.11);transition:transform .18s ease,box-shadow .18s ease}
+.desktopPromo:hover{transform:translateY(-3px);box-shadow:0 18px 32px rgba(30,27,75,.15)}
+.desktopPromo small{display:block;font-size:9px;font-weight:900;letter-spacing:.1em;opacity:.68;margin-bottom:6px}
+.desktopPromo h3{margin:0;font-size:16px;font-weight:950}
+.desktopPromo p{margin:5px 0 0;font-size:10px;opacity:.7}
+.desktopPromo>b{font-size:22px}
+.promoSteam{background:#A3E635;color:#1E1B4B}
+.promoPass{background:#CDBBE8;color:#1E1B4B}
+.promoKeys{background:#1E1B4B;color:#fff}.promoKeys>b{color:#A3E635}
+.desktopSection{padding:22px 0 0}
+.desktopSectionHead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.desktopSectionHead h2{margin:0;color:#1E1B4B;font-size:19px;font-weight:950;letter-spacing:-.02em}
+.desktopSectionHead a{font-size:11px;color:#6B21A8;text-decoration:none;font-weight:850}
+.desktopSectionHead a:hover{color:#1E1B4B}
+.desktopPlatformRow{display:grid;grid-template-columns:repeat(6,1fr);gap:9px}
+.desktopPlatform{min-height:43px;display:flex;align-items:center;justify-content:center;padding:10px 12px;background:#F7F4FA;color:#2E2943;border:2px solid #1E1B4B;border-radius:13px;text-decoration:none;font-size:11px;font-weight:850;box-shadow:0 5px 12px rgba(30,27,75,.06);transition:.16s}
+.desktopPlatform:hover,.desktopPlatform.active{background:#A3E635;color:#1E1B4B;transform:translateY(-2px)}
+.desktopCategoryGrid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.desktopCategory{min-height:125px;padding:16px;border:2px solid #1E1B4B;border-radius:18px;text-decoration:none;box-shadow:0 10px 22px rgba(30,27,75,.08);transition:.18s;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;color:#1E1B4B}
+.desktopCategory:hover{transform:translateY(-4px);box-shadow:0 17px 30px rgba(30,27,75,.13)}
+.desktopCatIcon{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:#1E1B4B;color:#A3E635;font-size:18px;margin-bottom:13px}
+.desktopCategory b{font-size:12px;font-weight:950}
+.desktopCategory small{margin-top:4px;font-size:9px;line-height:1.3;opacity:.72}
+.catTone1{background:#C7ADEA}.catTone2{background:#C6DF74}.catTone3{background:#B7A0DF}.catTone4{background:#9B83D0}.catTone5{background:#E2D7F2}.catTone6{background:#B3A2DD}
+.desktopGamesSection{padding-top:26px}
+.desktopContentGrid{display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:16px;align-items:start}
+.desktopGameGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.desktopGameGrid .gameCard{min-width:0}
+.desktopRightRail{display:grid;gap:12px}
+.desktopRailCard{background:rgba(247,244,250,.96);border:2px solid #1E1B4B;border-radius:19px;padding:15px;box-shadow:0 10px 23px rgba(30,27,75,.08);color:#28233E}
+.desktopRailHead{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.desktopRailHead h3{margin:0;color:#1E1B4B;font-size:14px}
+.desktopRailHead a{font-size:9px;color:#6B21A8;text-decoration:none}
+.desktopOffer{display:grid;grid-template-columns:52px minmax(0,1fr) auto;align-items:center;gap:9px;padding:9px 0;border-top:1px solid #DDD7E7;text-decoration:none;color:#28233E}
+.desktopOffer:first-of-type{border-top:0}
+.desktopOffer img{width:52px;height:32px;object-fit:cover;border-radius:7px}
+.desktopOffer span{min-width:0}.desktopOffer b{display:block;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.desktopOffer small{display:block;margin-top:3px;font-size:8px;color:#756E84}
+.desktopOffer strong{font-size:10px;color:#1E1B4B;white-space:nowrap}
+.desktopNewsletter{background:#1E1B4B;color:#fff}.desktopNewsletter h3{margin:7px 0 4px;color:#fff;font-size:14px}.desktopNewsletter p{margin:0 0 10px;color:rgba(255,255,255,.68);font-size:9px;line-height:1.45}.desktopMiniIcon{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:#A3E635;color:#1E1B4B;font-weight:950}
+.desktopNewsForm{display:flex;gap:6px}.desktopNewsForm input{min-width:0;flex:1;height:35px;border:1px solid rgba(255,255,255,.2);border-radius:9px;background:rgba(255,255,255,.08);color:#fff;padding:0 9px;font-size:9px}.desktopNewsForm button{width:37px;border:0;border-radius:9px;background:#A3E635;color:#1E1B4B;font-weight:950}
+.desktopHelp{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;text-decoration:none}.desktopHelp h3{margin:0;color:#1E1B4B;font-size:13px}.desktopHelp p{margin:4px 0 0;color:#756E84;font-size:9px;line-height:1.35}.desktopHelp>b{font-size:18px;color:#6B21A8}
+.desktopTrust{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding-top:24px}
+.desktopTrust>div{display:grid;grid-template-columns:34px 1fr;column-gap:10px;align-items:center;padding:13px 15px;background:rgba(247,244,250,.9);border:2px solid #1E1B4B;border-radius:15px;box-shadow:0 8px 18px rgba(30,27,75,.06)}
+.desktopTrust span{grid-row:span 2;width:32px;height:32px;display:grid;place-items:center;border-radius:10px;background:#A3E635;color:#1E1B4B;font-weight:950}
+.desktopTrust b{font-size:10px;color:#1E1B4B}.desktopTrust small{font-size:8px;color:#756E84}
+@media(max-width:1100px){.desktopHeroGrid{grid-template-columns:1fr}.desktopPromoStack{grid-template-columns:repeat(3,1fr);grid-template-rows:none}.desktopCategoryGrid{grid-template-columns:repeat(3,1fr)}.desktopPlatformRow{grid-template-columns:repeat(3,1fr)}.desktopContentGrid{grid-template-columns:1fr}.desktopRightRail{display:none}}
+@media(max-width:760px){.desktopHero{padding-top:15px}.desktopHeroCopy{padding:28px 23px;min-height:275px}.desktopHeroMain{min-height:275px;border-radius:20px}.desktopHeroTitle{font-size:42px}.desktopHeroImage{object-position:center}.desktopPromoStack{grid-template-columns:1fr;grid-template-rows:repeat(3,auto)}.desktopPromo{min-height:82px}.desktopPlatformRow{grid-template-columns:repeat(2,1fr)}.desktopCategoryGrid{grid-template-columns:repeat(2,1fr)}.desktopGameGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.desktopTrust{grid-template-columns:1fr}.desktopTrust>div{min-height:58px}}
