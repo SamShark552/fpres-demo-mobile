@@ -370,3 +370,26 @@ body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;back
 .desktopTrust b{font-size:10px;color:#1E1B4B}.desktopTrust small{font-size:8px;color:#756E84}
 @media(max-width:1100px){.desktopHeroGrid{grid-template-columns:1fr}.desktopPromoStack{grid-template-columns:repeat(3,1fr);grid-template-rows:none}.desktopCategoryGrid{grid-template-columns:repeat(3,1fr)}.desktopPlatformRow{grid-template-columns:repeat(3,1fr)}.desktopContentGrid{grid-template-columns:1fr}.desktopRightRail{display:none}}
 @media(max-width:760px){.desktopHero{padding-top:15px}.desktopHeroCopy{padding:28px 23px;min-height:275px}.desktopHeroMain{min-height:275px;border-radius:20px}.desktopHeroTitle{font-size:42px}.desktopHeroImage{object-position:center}.desktopPromoStack{grid-template-columns:1fr;grid-template-rows:repeat(3,auto)}.desktopPromo{min-height:82px}.desktopPlatformRow{grid-template-columns:repeat(2,1fr)}.desktopCategoryGrid{grid-template-columns:repeat(2,1fr)}.desktopGameGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.desktopTrust{grid-template-columns:1fr}.desktopTrust>div{min-height:58px}}
+
+
+/* ===== FPRES DESKTOP POLISH ===== */
+@media(min-width:1181px){
+  .desktopHeroGrid{grid-template-columns:minmax(0,1fr) 292px}
+  .desktopHeroMain{min-height:350px}
+  .desktopHeroCopy{min-height:350px;padding-left:44px}
+  .desktopHeroTitle{font-size:70px}
+  .desktopGameGrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+.desktopHeroImage{filter:saturate(1.08) contrast(1.04)}
+.desktopHeroCopy .btn.primary{box-shadow:0 8px 20px rgba(163,230,53,.18)}
+.desktopPromo h3{letter-spacing:-.02em}
+.desktopOffer:hover{background:#F0EBF6;border-radius:9px}
+.desktopOffer strong{transition:transform .16s ease}
+.desktopOffer:hover strong{transform:translateX(-2px)}
+.desktopNewsForm input::placeholder{color:rgba(255,255,255,.5)}
+.desktopNewsForm input:focus{outline:2px solid #A3E635;outline-offset:1px}
+.desktopTrust>div{transition:transform .16s ease,box-shadow .16s ease}
+.desktopTrust>div:hover{transform:translateY(-2px);box-shadow:0 14px 25px rgba(30,27,75,.1)}
+@media(max-width:760px){
+  .desktopHeroTitle span,.desktopHeroTitle em{font-size:.94em}
+}
