@@ -227,72 +227,39 @@ body:after{
   .platformChip{min-width:0;width:100%}
   .gameCard{border-radius:19px}
 }
-html[data-theme="dark"]{
-  --fp-bg:#0A0818;
-  --fp-surface:rgba(20,17,38,.94);
-  --fp-surface-2:#1B1632;
-  --fp-ink:#F7F4FF;
-  --fp-indigo:#C084FC;
-  --fp-muted:#9F98B5;
-  --fp-line:#3B3158;
-}
-html[data-theme="dark"] body{
-  background:
-    radial-gradient(80% 52% at 8% 8%,rgba(192,132,252,.10),transparent 58%),
-    radial-gradient(75% 55% at 90% 20%,rgba(163,230,53,.08),transparent 60%),
-    linear-gradient(180deg,#0A0818 0%,#0D0B1E 58%,#090713 100%);
-  color:var(--fp-ink);
-}
-html[data-theme="dark"] body:before{opacity:.42;filter:blur(55px)}
-html[data-theme="dark"] body:after{background:linear-gradient(180deg,rgba(10,8,24,.18),rgba(10,8,24,.58) 58%,rgba(10,8,24,.86))}
-html[data-theme="dark"] .header{background:rgba(18,14,39,.95);border-bottom-color:rgba(163,230,53,.72)}
-html[data-theme="dark"] .sectionHead h2,
-html[data-theme="dark"] .pageTitle,
-html[data-theme="dark"] .productTitle,
-html[data-theme="dark"] .gameTitle,
-html[data-theme="dark"] .gamePrice{color:#F5F1FF}
-html[data-theme="dark"] .sectionHead a{color:#C084FC}
-html[data-theme="dark"] .trustCard,
-html[data-theme="dark"] .sellerCard,
-html[data-theme="dark"] .filters,
-html[data-theme="dark"] .panel,
-html[data-theme="dark"] .mediaPanel,
-html[data-theme="dark"] .detailPanel,
-html[data-theme="dark"] .chatList,
-html[data-theme="dark"] .chatBox,
-html[data-theme="dark"] .faqCard,
-html[data-theme="dark"] .infoCard,
-html[data-theme="dark"] .sellerEntry,
-html[data-theme="dark"] .orderHero,
-html[data-theme="dark"] .notice,
-html[data-theme="dark"] .sellerAuth,
-html[data-theme="dark"] .offer,
-html[data-theme="dark"] .spec,
-html[data-theme="dark"] .cartItem,
-html[data-theme="dark"] .cartSummary,
-html[data-theme="dark"] .stat,
-html[data-theme="dark"] .profileHero,
-html[data-theme="dark"] .gameCard{
-  background:var(--fp-surface);border-color:#3B3158;box-shadow:0 12px 28px rgba(0,0,0,.24);color:#F7F4FF
-}
-html[data-theme="dark"] .platformChip{background:#17132D;color:#D7D0E7;border-color:#40355D;box-shadow:none}
-html[data-theme="dark"] .platformChip:hover,
-html[data-theme="dark"] .platformChip.active{background:var(--fp-lime);color:#17122E;border-color:var(--fp-lime)}
-html[data-theme="dark"] .gameCover{background:#090716}
-html[data-theme="dark"] .select,
-html[data-theme="dark"] .field,
-html[data-theme="dark"] .priceRow input{background:#0F0C20;color:#F7F4FF;border-color:#46395F}
-html[data-theme="dark"] .chatFloat{background:var(--fp-lime);color:#17122E;border-color:#17122E}
-html[data-theme="dark"] .themeToggle{background:#201941;color:#F7F3FF;border-color:#59477E}
 
-html[data-theme="dark"] .footer{
-  background:#0E0A22;
-  border-top-color:#A3E635;
-  color:#F8FAFC;
-}
-html[data-theme="dark"] .footer .brand-name,
-html[data-theme="dark"] .footer b{color:#FFFFFF}
-html[data-theme="dark"] .footer .brand-sub{color:#CFC7E8}
-html[data-theme="dark"] .footer p{color:#BDB6D2}
-html[data-theme="dark"] .footer a{color:#D8D1E8}
-html[data-theme="dark"] .footer a:hover{color:#A3E635}
+/* ===== FPRES LIGHT FINAL ===== */
+:root{--bg:#F2EFF7;--panel:#F7F4FA;--panel2:#ECE7F3;--line:#D8D2E4;--line2:#BBB1D0;--text:#28233E;--muted:#6F687E;--muted2:#8E879E;--violet:#C084FC;--green:#A3E635;--orange:#D98A43;--shadow:0 14px 34px rgba(30,27,75,.11),0 3px 8px rgba(30,27,75,.05)}
+html,body{background:var(--bg);color:var(--text)}
+body{background:radial-gradient(38% 32% at 8% 10%,rgba(192,132,252,.22),transparent 70%),radial-gradient(34% 30% at 92% 16%,rgba(163,230,53,.12),transparent 70%),linear-gradient(180deg,#F5F2F9 0%,#F2EFF7 54%,#ECE9F1 100%);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:-12%;z-index:-2;pointer-events:none;background:radial-gradient(32% 26% at 16% 24%,rgba(163,230,53,.18),transparent 72%),radial-gradient(35% 30% at 74% 27%,rgba(192,132,252,.20),transparent 72%),radial-gradient(38% 32% at 56% 78%,rgba(192,132,252,.12),transparent 72%);filter:blur(46px)}
+body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:rgba(247,244,250,.22)}
+.header{background:rgba(30,27,75,.97);border-bottom:3px solid #A3E635;box-shadow:0 9px 25px rgba(30,27,75,.14)}
+.navlinks a:hover{color:#A3E635}
+.brand-name{color:#fff}.brand-sub{color:#D8D2E7}
+.sectionHead h2,.pageTitle,.productTitle,.gameTitle,.gamePrice{color:#1E1B4B}
+.sectionHead a{color:#6B21A8}.sectionHead a:hover{color:#1E1B4B}
+.platforms{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap;overflow:visible}
+.platformChip{min-width:112px;min-height:44px;padding:10px 15px;display:inline-flex;align-items:center;justify-content:center;line-height:1;white-space:nowrap;overflow:visible;background:#F0ECF6;color:#2E2943;border:2px solid #1E1B4B;border-radius:14px;font-weight:850;box-shadow:0 5px 12px rgba(30,27,75,.07)}
+.platformChip:hover,.platformChip.active{background:#A3E635;color:#1E1B4B;border-color:#1E1B4B}
+.categories{gap:14px;align-items:stretch}
+.cat{min-height:138px;padding:17px;border:2px solid #1E1B4B;border-radius:20px;color:#1E1B4B;box-shadow:var(--shadow);overflow:hidden;transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+.cat:nth-child(1){background:#B99BE7}.cat:nth-child(2){background:#B7D957}.cat:nth-child(3){background:#AB92DE}.cat:nth-child(4){background:#8D72CC;color:#fff}.cat:nth-child(5){background:#CEC0E9}.cat:nth-child(6){background:#9B8BDB}
+.cat b{font-size:12px;font-weight:950;color:inherit}.cat span{display:block;color:inherit;opacity:.78;font-size:10px;margin-top:4px;font-weight:650}
+.cat:hover{background:#C084FC;color:#1E1B4B;transform:translateY(-4px);box-shadow:0 18px 34px rgba(30,27,75,.15)}
+.gameCard,.deal,.trustCard,.sellerCard,.filters,.panel,.mediaPanel,.detailPanel,.chatList,.chatBox,.faqCard,.infoCard,.sellerEntry,.orderHero,.notice,.sellerAuth,.offer,.spec,.cartItem,.cartSummary,.stat,.profileHero{background:rgba(247,244,250,.94);border:2px solid #1E1B4B;border-radius:20px;box-shadow:var(--shadow);color:#28233E}
+.gameCard:hover,.deal:hover,.trustClickable:hover,.sellerCard:hover{box-shadow:0 18px 38px rgba(30,27,75,.15);transform:translateY(-4px)}
+.gameMeta,.resultCount,.productMeta,.breadcrumbs{color:#756E84}
+.gameBuy,.miniBuy{background:#A3E635;color:#1E1B4B;border:2px solid #1E1B4B;border-radius:13px;font-weight:900}
+.btn,.iconbtn,.sellerHeaderLink,.sideLogout{border-radius:14px}
+.btn{border:2px solid #1E1B4B;background:#EFEAF4;color:#1E1B4B}.btn.primary{background:#A3E635;color:#1E1B4B}
+.btn:hover,.iconbtn:hover,.sellerHeaderLink:hover,.gameBuy:hover,.miniBuy:hover,.sideLogout:hover{background:#C084FC!important;color:#1E1B4B!important;border-color:#1E1B4B!important}
+.favGame{border-radius:13px;background:rgba(30,27,75,.88);color:#fff;border:2px solid #1E1B4B}
+.sideLogout{background:#EEEAF3;color:#332D48;border:2px solid #1E1B4B}
+.chatFloat{background:#A3E635;color:#1E1B4B;border:2px solid #1E1B4B;border-radius:15px}.chatFloat:hover{background:#C084FC;color:#1E1B4B}
+.chatList,.chatBox{background:rgba(247,244,250,.94)}.chatThread{color:#2E2943;border-color:#D8D2E4}.chatThread.active,.chatThread:hover{background:#E7DDF1;color:#1E1B4B}
+.bubble{background:#ECE8F3;color:#2E2943;border:1px solid #D7D0E3}.bubble.me{background:#A3D94A;color:#1E1B4B;border-color:#1E1B4B}
+.field,.select,.priceRow input,.chatComposer input{background:#FAF8FC;color:#2E2943;border:2px solid #1E1B4B;border-radius:13px}
+.modalBack{background:rgba(30,27,75,.34);backdrop-filter:blur(7px)}.modal{background:#F7F4FA;color:#28233E;border:2px solid #1E1B4B;border-radius:20px}.modal p{color:#716A80}
+.footer{background:#1E1B4B;border-top:3px solid #A3E635;color:#E9E5F0}.footer .brand-name,.footer b{color:#fff}.footer .brand-sub{color:#D5CFE4}.footer p{color:#D4CEE2}.footer a{color:#DDD8EA}.footer a:hover{color:#A3E635}
+@media(max-width:760px){.platforms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.platformChip{width:100%;min-width:0;min-height:44px;padding:10px 9px}.categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.cat{min-height:132px;border-radius:18px}}
