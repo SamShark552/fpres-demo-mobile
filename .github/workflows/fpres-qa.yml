@@ -4,6 +4,10 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
+concurrency:
+  group: fpres-browser-qa
+  cancel-in-progress: true
+
 jobs:
   browser-qa:
     runs-on: ubuntu-latest
