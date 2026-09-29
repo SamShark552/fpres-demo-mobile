@@ -107,7 +107,12 @@ test("support, login and buyer seller separation work", async ({ page }) => {
   await expect(page.locator(".chatFloat")).toContainText("Чаты");
   await expect(page.locator("a[href='seller-dashboard.html']").first()).toHaveCount(1);
   await page.locator("[data-login]").click();
+  await expect(page).toHaveURL(/account\.html\?auth=1/);
   await expect(page.locator("#loginModal")).toHaveClass(/show/);
+  await page.locator("[data-close]").click();
+  await expect(page).toHaveURL(/\/$/);
+  await page.locator("[data-login]").click();
+  await expect(page).toHaveURL(/account\.html\?auth=1/);
   await page.locator("#loginName").fill("QA Player");
   await page.locator("#loginEmail").fill("qa@fpres.local");
   await page.locator("[data-enter]").click();
