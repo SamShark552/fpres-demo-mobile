@@ -84,7 +84,14 @@ test("seller profile, follow and chat work", async ({ page }) => {
   await expect(page.locator(".bubble.me")).toContainText("Здравствуйте");
 });
 
-test("seller dashboard tabs work", async ({ page }) => {
+test("seller authentication, dashboard and logout work", async ({ page }) => {
+  await page.goto(BASE + "/seller-dashboard.html");
+  await expect(page.locator("#sellerLoginName")).toBeVisible();
+  await page.locator("[data-seller-enter]").click();
+  await expect(page.locator(".toast")).toContainText("Введите пароль");
+  await page.locator("#sellerLoginPassword").fill("demo-password");
+  await page.locator("[data-seller-enter]").click();
+  await expect(page.locator("h1")).toContainText("Кабинет продавца");
   for (const tab of ["overview","products","orders","inventory","finance","analytics"]) {
     await page.goto(BASE + "/seller-dashboard.html?tab=" + tab);
     await expect(page.locator("main")).toBeVisible();
@@ -93,6 +100,10 @@ test("seller dashboard tabs work", async ({ page }) => {
   await page.locator("#withdrawAmount").fill("5000");
   await page.locator("[data-withdraw]").click();
   await expect(page.locator(".toast")).toContainText(/5\s*000/);
+  await page.locator("[data-logout='seller']").click();
+  await expect(page).toHaveURL(/index\.html$/);
+  await page.goto(BASE + "/seller-dashboard.html");
+  await expect(page.locator("#sellerLoginPassword")).toBeVisible();
 });
 
 test("support, login and buyer seller separation work", async ({ page }) => {
