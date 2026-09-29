@@ -263,3 +263,44 @@ body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;back
 .modalBack{background:rgba(30,27,75,.34);backdrop-filter:blur(7px)}.modal{background:#F7F4FA;color:#28233E;border:2px solid #1E1B4B;border-radius:20px}.modal p{color:#716A80}
 .footer{background:#1E1B4B;border-top:3px solid #A3E635;color:#E9E5F0}.footer .brand-name,.footer b{color:#fff}.footer .brand-sub{color:#D5CFE4}.footer p{color:#D4CEE2}.footer a{color:#DDD8EA}.footer a:hover{color:#A3E635}
 @media(max-width:760px){.platforms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.platformChip{width:100%;min-width:0;min-height:44px;padding:10px 9px}.categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.cat{min-height:132px;border-radius:18px}}
+
+/* ===== FPRES DESKTOP EXPERIENCE ===== */
+.desktopOnly{display:block}
+.desktopHeroGrid{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:14px;align-items:stretch}
+.heroBox{min-height:420px}
+.heroPromos{display:grid;grid-template-rows:repeat(3,1fr);gap:14px}
+.heroPromo{display:flex;align-items:center;justify-content:space-between;padding:22px 20px;border-radius:20px;border:2px solid #1E1B4B;text-decoration:none;box-shadow:var(--shadow);transition:transform .18s ease,box-shadow .18s ease}
+.heroPromo:hover{transform:translateY(-3px);box-shadow:0 18px 32px rgba(30,27,75,.15)}
+.heroPromo div{display:flex;flex-direction:column;gap:6px}.heroPromo b{font-size:17px}.heroPromo span{font-size:11px;opacity:.72}.heroPromo strong{font-size:25px}
+.heroPromoDark{background:#1E1B4B;color:#fff}.heroPromoDark strong{color:#A3E635}
+.heroPromoLime{background:#A3E635;color:#1E1B4B}.heroPromoLime strong{color:#1E1B4B}
+.heroPromoPurple{background:#D8C7EF;color:#1E1B4B}.heroPromoPurple strong{color:#6D28D9}
+.desktopContentGrid{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:16px;align-items:start}
+.desktopContentGrid>.gameGrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.desktopRail{display:grid;gap:14px;position:sticky;top:92px}
+.railCard{background:rgba(247,244,250,.96);border:2px solid #1E1B4B;border-radius:20px;padding:17px;color:#28233E;box-shadow:var(--shadow);text-decoration:none}
+.railCard h3{margin:0 0 13px;color:#1E1B4B;font-size:15px}.railGame{display:flex;gap:10px;padding:10px 0;border-top:1px solid #DED8E8;text-decoration:none;color:#28233E}.railGame:first-of-type{border-top:0}.railGame img{width:72px;height:42px;object-fit:cover;border-radius:9px}.railGame span{min-width:0}.railGame b{display:block;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.railGame small{display:block;margin-top:4px;color:#716A80;font-size:9px}
+.railSignup{display:flex;flex-direction:column;gap:8px}.railSignup>b{font-size:15px;color:#1E1B4B}.railSignup>span{font-size:10px;color:#756E84}.railSignup input{height:40px;border:2px solid #1E1B4B;border-radius:11px;padding:0 10px;background:#FAF8FC;color:#28233E}.railSignup .btn{width:100%}
+.railHelp{display:flex;flex-direction:column;gap:6px}.railHelp>b{font-size:15px}.railHelp span{font-size:10px;color:#756E84}.railHelp strong{font-size:10px;color:#6B21A8;margin-top:3px}
+@media(min-width:1180px){
+  .container{width:min(1380px,calc(100% - 48px))}
+  .nav{min-height:78px}
+  .hero{padding-top:28px}
+  .heroCopy{padding:46px}
+  .hero h1{font-size:clamp(52px,4.7vw,76px)}
+  .trust{grid-template-columns:repeat(4,1fr)}
+  .categories{grid-template-columns:repeat(6,minmax(0,1fr))}
+}
+@media(max-width:1050px){
+  .desktopHeroGrid{grid-template-columns:1fr}
+  .heroPromos{grid-template-columns:repeat(3,1fr);grid-template-rows:1fr}
+  .desktopContentGrid{grid-template-columns:1fr}
+  .desktopRail{display:none}
+  .desktopContentGrid>.gameGrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:760px){
+  .desktopOnly{display:none!important}
+  .desktopHeroGrid{display:block}
+  .desktopContentGrid{display:block}
+  .desktopContentGrid>.gameGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
