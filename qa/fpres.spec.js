@@ -111,7 +111,7 @@ test("support, login and buyer seller separation work", async ({ page }) => {
   await expect(page.locator("#loginModal")).toHaveClass(/show/);
   await page.locator("[data-close]").click();
   await expect(page).toHaveURL(/\/index\.html$/);
-  await page.locator("[data-login]").click();
+  await page.locator(".btn.ghost[href*=\"auth=1\"]").click();
   await expect(page).toHaveURL(/account\.html\?auth=1/);
   await page.locator("#loginName").fill("QA Player");
   await page.locator("#loginEmail").fill("qa@fpres.local");
