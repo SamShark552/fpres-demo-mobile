@@ -1,24 +1,65 @@
-window.FPRES_DATA = {
-  games: [
-    {id:'1091500', name:'Cyberpunk 2077', platform:'Steam', region:'GLOBAL', price:2399, rating:4.98, reviews:12842, seller:'GameKey', genre:'RPG / Action'},
-    {id:'1245620', name:'ELDEN RING', platform:'Steam', region:'GLOBAL', price:2099, rating:4.97, reviews:8421, seller:'KeyStore', genre:'Action / RPG'},
-    {id:'730', name:'Counter-Strike 2', platform:'Steam', region:'GLOBAL', price:1299, rating:4.98, reviews:15310, seller:'PlayMarket', genre:'Shooter'},
-    {id:'570', name:'Dota 2', platform:'Steam', region:'GLOBAL', price:499, rating:4.96, reviews:19442, seller:'GameKey', genre:'MOBA'},
-    {id:'553850', name:'HELLDIVERS 2', platform:'Steam', region:'GLOBAL', price:1699, rating:4.95, reviews:4982, seller:'KeyStore', genre:'Co-op / Shooter'},
-    {id:'1174180', name:'Red Dead Redemption 2', platform:'Steam', region:'GLOBAL', price:1899, rating:4.96, reviews:15310, seller:'GameKey', genre:'Action / Adventure'},
-    {id:'1086940', name:"Baldur's Gate 3", platform:'Steam', region:'GLOBAL', price:2799, rating:4.99, reviews:8421, seller:'PlayMarket', genre:'RPG'},
-    {id:'2669320', name:'EA SPORTS FC 25', platform:'Steam', region:'GLOBAL', price:2199, rating:4.86, reviews:5230, seller:'DigitalLab', genre:'Sports'},
-    {id:'1938090', name:'Call of Duty', platform:'Steam', region:'GLOBAL', price:2499, rating:4.84, reviews:9112, seller:'GameHub', genre:'Shooter'},
-    {id:'271590', name:'Grand Theft Auto V', platform:'Steam', region:'GLOBAL', price:899, rating:4.93, reviews:11240, seller:'PlayMarket', genre:'Action / Open World'}
-  ],
-  sellers:[
-    {slug:'gamekey',name:'GameKey',rating:4.98,sales:12842,success:99.7,online:true},
-    {slug:'keystore',name:'KeyStore',rating:4.97,sales:9441,success:99.5,online:true},
-    {slug:'playmarket',name:'PlayMarket',rating:4.96,sales:8230,success:99.6,online:true},
-    {slug:'digitallab',name:'DigitalLab',rating:4.95,sales:6121,success:99.3,online:true},
-    {slug:'gamehub',name:'GameHub',rating:4.92,sales:5883,success:99.1,online:false}
-  ],
-  offerVariants:['GLOBAL','EU','CIS','Steam'],
+window.FPRES_DATA={
+games:[
+{id:"1091500",name:"Cyberpunk 2077",platform:"Steam",group:"Steam",region:"GLOBAL",price:2399,rating:4.98,reviews:12842,seller:"GameKey",genre:"RPG / Action"},
+{id:"1245620",name:"ELDEN RING",platform:"Steam",group:"Steam",region:"GLOBAL",price:2099,rating:4.97,reviews:8421,seller:"KeyStore",genre:"Action / RPG"},
+{id:"730",name:"Counter-Strike 2",platform:"Steam",group:"Steam",region:"GLOBAL",price:1299,rating:4.98,reviews:15310,seller:"PlayMarket",genre:"Shooter"},
+{id:"570",name:"Dota 2",platform:"Steam",group:"Steam",region:"GLOBAL",price:499,rating:4.96,reviews:19442,seller:"GameKey",genre:"MOBA"},
+{id:"553850",name:"HELLDIVERS 2",platform:"Steam",group:"Steam",region:"GLOBAL",price:1699,rating:4.95,reviews:4982,seller:"KeyStore",genre:"Co-op / Shooter"},
+{id:"1174180",name:"Red Dead Redemption 2",platform:"Steam",group:"Steam",region:"GLOBAL",price:1899,rating:4.96,reviews:15310,seller:"GameKey",genre:"Action / Adventure"},
+{id:"1086940",name:"Baldur's Gate 3",platform:"Steam",group:"Steam",region:"GLOBAL",price:2799,rating:4.99,reviews:8421,seller:"PlayMarket",genre:"RPG"},
+{id:"1938090",name:"Call of Duty",platform:"Steam",group:"Steam",region:"GLOBAL",price:2499,rating:4.84,reviews:9112,seller:"GameHub",genre:"Shooter"},
+{id:"271590",name:"Grand Theft Auto V",platform:"Steam",group:"Steam",region:"GLOBAL",price:899,rating:4.93,reviews:11240,seller:"PlayMarket",genre:"Action / Open World"},
+{id:"578080",name:"PUBG: BATTLEGROUNDS",platform:"Steam",group:"Steam",region:"GLOBAL",price:799,rating:4.86,reviews:16820,seller:"DigitalLab",genre:"Battle Royale"},
+{id:"2322010",name:"God of War Ragnarök",platform:"PlayStation 5",group:"PlayStation",region:"GLOBAL",price:3299,rating:4.97,reviews:9412,seller:"GameKey",genre:"Action / Adventure"},
+{id:"2215430",name:"Ghost of Tsushima DIRECTOR'S CUT",platform:"PlayStation 5",group:"PlayStation",region:"GLOBAL",price:3099,rating:4.96,reviews:8012,seller:"KeyStore",genre:"Action / Open World"},
+{id:"2420110",name:"Horizon Forbidden West",platform:"PlayStation 5",group:"PlayStation",region:"GLOBAL",price:2899,rating:4.95,reviews:7341,seller:"PlayMarket",genre:"Action / RPG"},
+{id:"1817190",name:"Marvel's Spider-Man 2",platform:"PlayStation 5",group:"PlayStation",region:"GLOBAL",price:3599,rating:4.94,reviews:9280,seller:"GameHub",genre:"Action / Adventure"},
+{id:"1817070",name:"Marvel's Spider-Man Remastered",platform:"PlayStation 5",group:"PlayStation",region:"GLOBAL",price:2199,rating:4.93,reviews:11842,seller:"GameKey",genre:"Action"},
+{id:"1593500",name:"God of War",platform:"PlayStation",group:"PlayStation",region:"GLOBAL",price:1999,rating:4.96,reviews:10521,seller:"KeyStore",genre:"Action / Adventure"},
+{id:"1151640",name:"Horizon Zero Dawn Complete Edition",platform:"PlayStation",group:"PlayStation",region:"GLOBAL",price:1799,rating:4.91,reviews:9320,seller:"PlayMarket",genre:"Action / RPG"},
+{id:"1888930",name:"The Last of Us Part I",platform:"PlayStation 5",group:"PlayStation",region:"GLOBAL",price:2999,rating:4.90,reviews:5210,seller:"DigitalLab",genre:"Action / Adventure"},
+{id:"1462040",name:"FINAL FANTASY VII REMAKE INTERGRADE",platform:"PlayStation 5",group:"PlayStation",region:"GLOBAL",price:2799,rating:4.94,reviews:6110,seller:"GameHub",genre:"RPG"},
+{id:"1222140",name:"Detroit: Become Human",platform:"PlayStation",group:"PlayStation",region:"GLOBAL",price:1699,rating:4.92,reviews:14221,seller:"GameKey",genre:"Narrative / Adventure"},
+{id:"1551360",name:"Forza Horizon 5",platform:"Xbox Series X|S",group:"Xbox",region:"GLOBAL",price:2499,rating:4.96,reviews:18220,seller:"GameKey",genre:"Racing"},
+{id:"1172620",name:"Sea of Thieves",platform:"Xbox Series X|S",group:"Xbox",region:"GLOBAL",price:1399,rating:4.88,reviews:12540,seller:"KeyStore",genre:"Action / Co-op"},
+{id:"962130",name:"Grounded",platform:"Xbox",group:"Xbox",region:"GLOBAL",price:1699,rating:4.91,reviews:7342,seller:"PlayMarket",genre:"Survival / Co-op"},
+{id:"1716740",name:"Starfield",platform:"Xbox Series X|S",group:"Xbox",region:"GLOBAL",price:2899,rating:4.74,reviews:9820,seller:"GameHub",genre:"RPG / Sci-Fi"},
+{id:"1817230",name:"Hi-Fi RUSH",platform:"Xbox",group:"Xbox",region:"GLOBAL",price:1399,rating:4.93,reviews:6812,seller:"GameKey",genre:"Action / Rhythm"},
+{id:"1097840",name:"Gears 5",platform:"Xbox",group:"Xbox",region:"GLOBAL",price:999,rating:4.87,reviews:9621,seller:"KeyStore",genre:"Shooter"},
+{id:"1466860",name:"Age of Empires IV",platform:"Xbox / PC",group:"Xbox",region:"GLOBAL",price:1599,rating:4.86,reviews:8314,seller:"PlayMarket",genre:"Strategy"},
+{id:"1250410",name:"Microsoft Flight Simulator",platform:"Xbox / PC",group:"Xbox",region:"GLOBAL",price:2499,rating:4.82,reviews:5421,seller:"DigitalLab",genre:"Simulation"},
+{id:"495420",name:"State of Decay 2",platform:"Xbox",group:"Xbox",region:"GLOBAL",price:1099,rating:4.80,reviews:6452,seller:"GameHub",genre:"Survival"},
+{id:"1240440",name:"Halo Infinite",platform:"Xbox Series X|S",group:"Xbox",region:"GLOBAL",price:1299,rating:4.84,reviews:10332,seller:"GameKey",genre:"Shooter"},
+{id:"990080",name:"Hogwarts Legacy",platform:"Nintendo Switch",group:"Nintendo",region:"GLOBAL",price:2799,rating:4.86,reviews:9242,seller:"GameKey",genre:"RPG / Adventure"},
+{id:"1237320",name:"Sonic Frontiers",platform:"Nintendo Switch",group:"Nintendo",region:"GLOBAL",price:2199,rating:4.78,reviews:4812,seller:"KeyStore",genre:"Action / Platformer"},
+{id:"1687950",name:"Persona 5 Royal",platform:"Nintendo Switch",group:"Nintendo",region:"GLOBAL",price:2399,rating:4.97,reviews:11820,seller:"PlayMarket",genre:"JRPG"},
+{id:"1446780",name:"Monster Hunter Rise",platform:"Nintendo Switch",group:"Nintendo",region:"GLOBAL",price:1899,rating:4.93,reviews:15442,seller:"GameHub",genre:"Action / RPG"},
+{id:"1295510",name:"DRAGON QUEST XI S",platform:"Nintendo Switch",group:"Nintendo",region:"GLOBAL",price:1999,rating:4.95,reviews:7021,seller:"GameKey",genre:"JRPG"},
+{id:"1971650",name:"OCTOPATH TRAVELER II",platform:"Nintendo Switch",group:"Nintendo",region:"GLOBAL",price:2299,rating:4.94,reviews:4012,seller:"KeyStore",genre:"JRPG"},
+{id:"920210",name:"LEGO Star Wars: The Skywalker Saga",platform:"Nintendo Switch",group:"Nintendo",region:"GLOBAL",price:1799,rating:4.88,reviews:5211,seller:"PlayMarket",genre:"Adventure / Family"},
+{id:"1868140",name:"DAVE THE DIVER",platform:"Nintendo Switch",group:"Nintendo",region:"GLOBAL",price:999,rating:4.96,reviews:9411,seller:"DigitalLab",genre:"Adventure / Sim"},
+{id:"1244090",name:"Sea of Stars",platform:"Nintendo Switch",group:"Nintendo",region:"GLOBAL",price:1599,rating:4.91,reviews:7321,seller:"GameHub",genre:"RPG"},
+{id:"1145360",name:"Hades",platform:"Nintendo Switch",group:"Nintendo",region:"GLOBAL",price:1299,rating:4.98,reviews:18212,seller:"GameKey",genre:"Action / Roguelike"},
+{id:"2669320",name:"EA SPORTS FC 25",platform:"EA App",group:"EA / Epic",region:"GLOBAL",price:2199,rating:4.86,reviews:5230,seller:"DigitalLab",genre:"Sports"},
+{id:"1774580",name:"Star Wars Jedi: Survivor",platform:"EA App",group:"EA / Epic",region:"GLOBAL",price:2399,rating:4.87,reviews:6821,seller:"GameKey",genre:"Action / Adventure"},
+{id:"1845910",name:"Dragon Age: The Veilguard",platform:"EA App",group:"EA / Epic",region:"GLOBAL",price:2999,rating:4.82,reviews:4312,seller:"KeyStore",genre:"RPG"},
+{id:"1693980",name:"Dead Space",platform:"EA App",group:"EA / Epic",region:"GLOBAL",price:1499,rating:4.94,reviews:7921,seller:"PlayMarket",genre:"Horror / Action"},
+{id:"1172380",name:"Star Wars Jedi: Fallen Order",platform:"EA App",group:"EA / Epic",region:"GLOBAL",price:999,rating:4.93,reviews:16420,seller:"GameHub",genre:"Action / Adventure"},
+{id:"1222670",name:"The Sims 4",platform:"EA App",group:"EA / Epic",region:"GLOBAL",price:799,rating:4.79,reviews:24211,seller:"GameKey",genre:"Simulation"},
+{id:"1237950",name:"STAR WARS Battlefront II",platform:"EA App",group:"EA / Epic",region:"GLOBAL",price:1199,rating:4.85,reviews:13124,seller:"KeyStore",genre:"Shooter / Action"},
+{id:"1517290",name:"Battlefield 2042",platform:"EA App",group:"EA / Epic",region:"GLOBAL",price:1499,rating:4.76,reviews:11242,seller:"PlayMarket",genre:"Shooter"},
+{id:"1222680",name:"Need for Speed Heat",platform:"EA App",group:"EA / Epic",region:"GLOBAL",price:999,rating:4.83,reviews:9732,seller:"DigitalLab",genre:"Racing"},
+{id:"1262540",name:"Need for Speed Unbound",platform:"EA App",group:"EA / Epic",region:"GLOBAL",price:1299,rating:4.79,reviews:6214,seller:"GameHub",genre:"Racing"}
+],
+sellers:[
+{slug:"gamekey",name:"GameKey",rating:4.98,sales:12842,success:99.7,online:true},
+{slug:"keystore",name:"KeyStore",rating:4.97,sales:9441,success:99.5,online:true},
+{slug:"playmarket",name:"PlayMarket",rating:4.96,sales:8230,success:99.6,online:true},
+{slug:"digitallab",name:"DigitalLab",rating:4.95,sales:6121,success:99.3,online:true},
+{slug:"gamehub",name:"GameHub",rating:4.92,sales:5883,success:99.1,online:false}
+],
+platforms:["Все","Steam","PlayStation","Xbox","Nintendo","EA / Epic"],
+categories:["Игры","Ключи","DLC","Игровые услуги","Пополнение","Подписки"]
 };
-window.fpresImg = id => `https://cdn.cloudflare.steamstatic.com/steam/apps/${id}/header.jpg`;
-window.money = n => new Intl.NumberFormat('ru-RU').format(n) + ' ₽';
+window.fpresImg=id=>`https://cdn.cloudflare.steamstatic.com/steam/apps/${id}/header.jpg`;
+window.money=n=>new Intl.NumberFormat("ru-RU").format(n)+" ₽";
