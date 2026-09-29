@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a0f16">
+<title>FPRES — Gaming Marketplace</title>
+<style>
+:root{--bg:#070b11;--panel:#0d131d;--panel2:#111925;--line:#202a38;--text:#f5f7fb;--muted:#8f9bae;--violet:#8f5cff;--violet2:#6e45d9;--green:#57d38b;--orange:#ff9b4a;--shadow:0 16px 40px rgba(0,0,0,.28)}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{min-height:100vh}
+button,input{font:inherit}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}
+.header{position:sticky;top:0;z-index:20;background:rgba(7,11,17,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.04)}
+.nav{height:68px;display:flex;align-items:center;gap:24px}.brand{display:flex;align-items:center;gap:9px;color:#fff;text-decoration:none;font-weight:800;letter-spacing:.02em}.brandmark{width:29px;height:29px;border:1px solid rgba(143,92,255,.45);background:linear-gradient(145deg,#8f5cff,#5f3cc0);border-radius:9px;display:grid;place-items:center;font-weight:900;font-size:15px;box-shadow:0 5px 18px rgba(143,92,255,.18)}.brand small{display:block;color:#7e8aa0;font-size:9px;font-weight:700;letter-spacing:.16em;margin-top:1px}
+.links{display:flex;gap:20px;color:#aeb7c7;font-size:13px}.links a{color:inherit;text-decoration:none}.links a:hover{color:#fff}
+.navsearch{margin-left:auto;max-width:260px;flex:1}.search{height:42px;background:#0c121b;border:1px solid var(--line);border-radius:12px;color:#fff;padding:0 13px;outline:none;width:100%}.search:focus{border-color:#4e3a7a;box-shadow:0 0 0 3px rgba(143,92,255,.08)}
+.actions{display:flex;align-items:center;gap:9px}.iconbtn,.ghost,.sell{height:40px;border:1px solid var(--line);background:#0b1119;color:#dbe2ee;border-radius:11px;padding:0 13px}.iconbtn{width:40px;padding:0;position:relative}.badge{position:absolute;right:-4px;top:-5px;background:var(--violet);color:#fff;font-size:10px;width:18px;height:18px;border-radius:999px;display:grid;place-items:center;border:2px solid var(--bg)}.sell{background:#8f5cff;color:#fff;border-color:#8f5cff;font-weight:700}
+.hero{padding:64px 0 34px}.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch}.heroCopy{padding:20px 0}.eyebrow{font-size:11px;letter-spacing:.18em;color:#8e99ac;text-transform:uppercase;margin-bottom:16px}.hero h1{font-size:clamp(36px,5vw,64px);line-height:1.02;margin:0 0 16px;letter-spacing:-.045em;max-width:650px}.hero p{color:#99a4b5;font-size:15px;line-height:1.65;max-width:560px;margin:0 0 22px}.heroSearch{max-width:640px;position:relative}.heroSearch input{height:56px;padding:0 50px 0 17px;border-radius:15px;background:#0d141e;border:1px solid #273243;color:#fff;width:100%}.heroSearch span{position:absolute;right:16px;top:17px;color:#718098}.heroMedia{border:1px solid #1d2734;border-radius:22px;overflow:hidden;min-height:335px;background:#0a1018;box-shadow:var(--shadow);position:relative}.heroMedia img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.88) contrast(1.04)}.heroMedia:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,11,17,.75),transparent 60% 100%),linear-gradient(0deg,rgba(7,11,17,.45),transparent 55%);pointer-events:none}
+.section{padding:28px 0}.sectionHead{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:14px}.sectionHead h2{font-size:21px;margin:0;letter-spacing:-.02em}.sectionHead a{color:#a998ff;text-decoration:none;font-size:13px}.chips{display:flex;gap:8px;overflow:auto;padding-bottom:2px}.chip{white-space:nowrap;border:1px solid var(--line);background:#0c121a;color:#aeb7c7;padding:10px 13px;border-radius:11px;font-size:12px}
+.grid6{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.tile{background:#0b1119;border:1px solid var(--line);border-radius:14px;padding:14px;min-height:96px}.tile .ic{width:34px;height:34px;border-radius:10px;background:#17132a;color:#ab93ff;display:grid;place-items:center;margin-bottom:12px}.tile b{font-size:13px}.tile span{display:block;color:#758298;font-size:11px;margin-top:3px}
+.products{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;min-width:0;transition:.18s transform,.18s border-color,.18s box-shadow}.card:hover{transform:translateY(-2px);border-color:#354154;box-shadow:0 12px 28px rgba(0,0,0,.22)}.cover{aspect-ratio:16/9;background:#101722;overflow:hidden}.cover img{width:100%;height:100%;object-fit:cover;display:block}.cardBody{padding:12px}.meta{display:flex;gap:8px;align-items:center;color:#768399;font-size:10px;margin-bottom:8px}.title{font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.row{display:flex;justify-content:space-between;gap:8px;align-items:end;margin-top:12px}.price{font-weight:800;font-size:15px}.seller{font-size:10px;color:#909bad;margin-top:4px}.buy{border:0;background:#f4f6fb;color:#0a0d13;border-radius:9px;padding:8px 11px;font-weight:800;font-size:11px}
+.deals{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px}.deal{position:relative;min-height:180px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#0d131c}.deal img{width:100%;height:100%;object-fit:cover;display:block;opacity:.78}.deal .overlay{position:absolute;inset:0;padding:18px;background:linear-gradient(90deg,rgba(5,8,12,.88),rgba(5,8,12,.1) 75%)}.deal h3{font-size:19px;margin:0 0 8px}.deal p{margin:0;color:#b2bbc9;font-size:12px}.tag{display:inline-block;margin-bottom:10px;padding:6px 8px;border-radius:8px;background:rgba(143,92,255,.16);color:#bcaeff;font-size:10px;font-weight:700}
+.sellers{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.sellerCard{display:flex;gap:12px;align-items:center;padding:14px;background:#0c121a;border:1px solid var(--line);border-radius:14px}.avatar{width:42px;height:42px;border-radius:12px;background:linear-gradient(145deg,#2c2547,#161b25);display:grid;place-items:center;color:#cdbfff;font-weight:800}.sellerCard b{font-size:12px}.sellerCard span{display:block;font-size:10px;color:#8490a2;margin-top:4px}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.trustBox{padding:16px;background:#0b1119;border:1px solid var(--line);border-radius:14px}.trustBox b{font-size:12px}.trustBox p{margin:5px 0 0;color:#818da0;font-size:11px;line-height:1.45}
+.footer{margin-top:40px;padding:34px 0 50px;border-top:1px solid #151d28;color:#7f8ba0}.footerGrid{display:grid;grid-template-columns:2fr repeat(3,1fr);gap:24px}.footer b{color:#fff;font-size:12px}.footer a{display:block;color:#78859a;text-decoration:none;font-size:11px;margin-top:9px}.footer p{font-size:11px;line-height:1.6;max-width:360px}
+@media (max-width:980px){.heroGrid{grid-template-columns:1fr}.heroMedia{min-height:280px}.grid6{grid-template-columns:repeat(3,1fr)}.products{grid-template-columns:repeat(3,1fr)}.deals{grid-template-columns:1fr 1fr}.deal:first-child{grid-column:1/-1}.sellers,.trust{grid-template-columns:repeat(2,1fr)}.links{display:none}}
+@media (max-width:640px){.wrap{width:min(100% - 20px,1180px)}.nav{height:60px;gap:10px}.brand small{display:none}.navsearch{order:4;flex-basis:100%;max-width:none}.header{padding-bottom:8px}.nav{flex-wrap:wrap}.actions{margin-left:auto}.actions .ghost{display:none}.sell{display:none}.hero{padding:34px 0 18px}.hero h1{font-size:39px}.hero p{font-size:14px}.heroMedia{min-height:205px;border-radius:18px}.grid6{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:repeat(2,1fr);gap:10px}.deals{grid-template-columns:1fr}.deal:first-child{grid-column:auto}.sellers,.trust{grid-template-columns:1fr 1fr}.section{padding:22px 0}.sectionHead h2{font-size:18px}.footerGrid{grid-template-columns:1fr 1fr}.footerGrid>div:first-child{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<header class="header"><div class="wrap"><nav class="nav">
+<a class="brand" href="#"><span class="brandmark">F</span><span>FPRES<small>GAMING MARKETPLACE</small></span></a>
+<div class="links"><a href="#catalog">Каталог</a><a href="#games">Игры</a><a href="#keys">Ключи</a><a href="#services">Услуги</a></div>
+<div class="navsearch"><input class="search" id="q" placeholder="Найти игру, ключ или услугу"></div>
+<div class="actions"><button class="iconbtn" aria-label="Избранное">♡</button><button class="iconbtn" aria-label="Корзина">🛒<i class="badge">3</i></button><button class="ghost">Войти</button><button class="sell">Продавать</button></div>
+</nav></div></header>
+
+<main>
+<section class="hero wrap"><div class="heroGrid">
+<div class="heroCopy"><div class="eyebrow">FPRES · GAMING MARKETPLACE</div><h1>НАЙДИ ИГРУ.<br>ПОЛУЧИ ЕЁ СРАЗУ.</h1><p>Игры, ключи, DLC и игровые услуги от продавцов FPRES. Сравнивай предложения, выбирай продавца и получай цифровой товар без лишних шагов.</p><div class="heroSearch"><input id="heroQ" placeholder="Найти игру, ключ или услугу"><span>⌕</span></div></div>
+<div class="heroMedia"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg" alt="Cyberpunk 2077"></div>
+</div></section>
+
+<section class="wrap section" id="catalog"><div class="sectionHead"><h2>Категории</h2><a href="#">Все категории →</a></div>
+<div class="grid6">
+<div class="tile"><div class="ic">🎮</div><b>Игры</b><span>Steam · EA · Ubisoft</span></div>
+<div class="tile"><div class="ic">🔑</div><b>Ключи</b><span>Мгновенная выдача</span></div>
+<div class="tile"><div class="ic">◈</div><b>DLC</b><span>Дополнения</span></div>
+<div class="tile"><div class="ic">⚙</div><b>Услуги</b><span>Для геймеров</span></div>
+<div class="tile"><div class="ic">₽</div><b>Пополнение</b><span>Цифровые сервисы</span></div>
+<div class="tile"><div class="ic">＋</div><b>Другое</b><span>Смотреть всё</span></div>
+</div></section>
+
+<section class="wrap section" id="games"><div class="sectionHead"><h2>Популярные игры</h2><a href="#">Смотреть все →</a></div>
+<div class="chips"><div class="chip">Все</div><div class="chip">Steam</div><div class="chip">PlayStation</div><div class="chip">Xbox</div><div class="chip">Nintendo</div><div class="chip">PC</div></div>
+</section>
+
+<section class="wrap section"><div class="sectionHead"><h2>Лучшие предложения</h2><a href="#">Все предложения →</a></div>
+<div class="products" id="products">
+<article class="card"><div class="cover"><img loading="lazy" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg" alt="Cyberpunk 2077"></div><div class="cardBody"><div class="meta"><span>Steam · GLOBAL</span><span>•</span><span style="color:#67c98f">●</span></div><div class="title">Cyberpunk 2077</div><div class="seller">GameKey · ⭐ 4.98</div><div class="row"><div class="price">2 399 ₽</div><button class="buy" onclick="addCart('Cyberpunk 2077')">Купить</button></div></div></article><article class="card"><div class="cover"><img loading="lazy" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg" alt="ELDEN RING"></div><div class="cardBody"><div class="meta"><span>Steam · GLOBAL</span><span>•</span><span style="color:#67c98f">●</span></div><div class="title">ELDEN RING</div><div class="seller">KeyStore · ⭐ 4.98</div><div class="row"><div class="price">2 099 ₽</div><button class="buy" onclick="addCart('ELDEN RING')">Купить</button></div></div></article><article class="card"><div class="cover"><img loading="lazy" src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg" alt="Counter-Strike 2"></div><div class="cardBody"><div class="meta"><span>Steam</span><span>•</span><span style="color:#67c98f">●</span></div><div class="title">Counter-Strike 2</div><div class="seller">PlayMarket · ⭐ 4.98</div><div class="row"><div class="price">1 299 ₽</div><button class="buy" onclick="addCart('Counter-Strike 2')">Купить</button></div></div></article><article class="card"><div class="cover"><img loading="lazy" src="https://cdn.cloudflare.steamstatic.com/steam/apps/570/header.jpg" alt="Dota 2"></div><div class="cardBody"><div class="meta"><span>Steam</span><span>•</span><span style="color:#67c98f">●</span></div><div class="title">Dota 2</div><div class="seller">GameKey · ⭐ 4.98</div><div class="row"><div class="price">499 ₽</div><button class="buy" onclick="addCart('Dota 2')">Купить</button></div></div></article><article class="card"><div class="cover"><img loading="lazy" src="https://cdn.cloudflare.steamstatic.com/steam/apps/553850/header.jpg" alt="HELLDIVERS™ 2"></div><div class="cardBody"><div class="meta"><span>Steam · GLOBAL</span><span>•</span><span style="color:#67c98f">●</span></div><div class="title">HELLDIVERS™ 2</div><div class="seller">KeyStore · ⭐ 4.98</div><div class="row"><div class="price">1 699 ₽</div><button class="buy" onclick="addCart('HELLDIVERS™ 2')">Купить</button></div></div></article><article class="card"><div class="cover"><img loading="lazy" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg" alt="Red Dead Redemption 2"></div><div class="cardBody"><div class="meta"><span>Steam · GLOBAL</span><span>•</span><span style="color:#67c98f">●</span></div><div class="title">Red Dead Redemption 2</div><div class="seller">GameKey · ⭐ 4.98</div><div class="row"><div class="price">1 899 ₽</div><button class="buy" onclick="addCart('Red Dead Redemption 2')">Купить</button></div></div></article><article class="card"><div class="cover"><img loading="lazy" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg" alt="Baldur's Gate 3"></div><div class="cardBody"><div class="meta"><span>Steam · GLOBAL</span><span>•</span><span style="color:#67c98f">●</span></div><div class="title">Baldur's Gate 3</div><div class="seller">PlayMarket · ⭐ 4.98</div><div class="row"><div class="price">2 799 ₽</div><button class="buy" onclick="addCart('Baldur&#39;s Gate 3')">Купить</button></div></div></article><article class="card"><div class="cover"><img loading="lazy" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1817190/header.jpg" alt="Marvel's Spider-Man 2"></div><div class="cardBody"><div class="meta"><span>PC · GLOBAL</span><span>•</span><span style="color:#67c98f">●</span></div><div class="title">Marvel's Spider-Man 2</div><div class="seller">GameKey · ⭐ 4.98</div><div class="row"><div class="price">2 699 ₽</div><button class="buy" onclick="addCart('Marvel&#39;s Spider-Man 2')">Купить</button></div></div></article><article class="card"><div class="cover"><img loading="lazy" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1240440/header.jpg" alt="Halo Infinite"></div><div class="cardBody"><div class="meta"><span>Steam</span><span>•</span><span style="color:#67c98f">●</span></div><div class="title">Halo Infinite</div><div class="seller">KeyStore · ⭐ 4.98</div><div class="row"><div class="price">1 099 ₽</div><button class="buy" onclick="addCart('Halo Infinite')">Купить</button></div></div></article><article class="card"><div class="cover"><img loading="lazy" src="https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg" alt="Grand Theft Auto V"></div><div class="cardBody"><div class="meta"><span>Steam</span><span>•</span><span style="color:#67c98f">●</span></div><div class="title">Grand Theft Auto V</div><div class="seller">PlayMarket · ⭐ 4.98</div><div class="row"><div class="price">899 ₽</div><button class="buy" onclick="addCart('Grand Theft Auto V')">Купить</button></div></div></article>
+</div></section>
+
+<section class="wrap section"><div class="sectionHead"><h2>Акции</h2><a href="#">Все акции →</a></div><div class="deals">
+<div class="deal"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg" alt=""><div class="overlay"><span class="tag">СЕЙЧАС</span><h3>Лучшие цены недели</h3><p>Сотни цифровых товаров с актуальными предложениями продавцов.</p></div></div>
+<div class="deal"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg" alt=""><div class="overlay"><span class="tag">STEAM</span><h3>До −50%</h3><p>Популярные PC-игры.</p></div></div>
+<div class="deal"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg" alt=""><div class="overlay"><span class="tag">GLOBAL</span><h3>Мгновенная выдача</h3><p>Товары, которые приходят сразу после оплаты.</p></div></div>
+</div></section>
+
+<section class="wrap section"><div class="sectionHead"><h2>Проверенные продавцы</h2><a href="#">Все продавцы →</a></div><div class="sellers">
+<div class="sellerCard"><div class="avatar">G</div><div><b>GameKey</b><span>⭐ 4.98 · 1200 продаж</span></div></div><div class="sellerCard"><div class="avatar">K</div><div><b>KeyStore</b><span>⭐ 4.97 · 1060 продаж</span></div></div><div class="sellerCard"><div class="avatar">P</div><div><b>PlayMarket</b><span>⭐ 4.96 · 920 продаж</span></div></div><div class="sellerCard"><div class="avatar">D</div><div><b>DigitalLab</b><span>⭐ 4.95 · 780 продаж</span></div></div>
+</div></section>
+
+<section class="wrap section"><div class="trust">
+<div class="trustBox"><b>⚡ Мгновенная выдача</b><p>Автоматически получай цифровой товар после успешной оплаты.</p></div>
+<div class="trustBox"><b>✓ Проверенные продавцы</b><p>Рейтинг, история продаж и прозрачная репутация.</p></div>
+<div class="trustBox"><b>▣ Безопасная оплата</b><p>Короткий checkout без лишних шагов.</p></div>
+<div class="trustBox"><b>◔ Поддержка</b><p>Помощь по заказу и спорным ситуациям.</p></div>
+</div></section>
+</main>
+
+<footer class="footer"><div class="wrap footerGrid">
+<div><div class="brand"><span class="brandmark">F</span><span>FPRES<small>GAMING MARKETPLACE</small></span></div><p>Маркетплейс цифровых товаров для игроков. Игры, ключи, DLC и услуги в одном месте.</p></div>
+<div><b>Покупателям</b><a href="#">Каталог</a><a href="#">Заказы</a><a href="#">Избранное</a><a href="#">Поддержка</a></div>
+<div><b>Продавцам</b><a href="#">Стать продавцом</a><a href="#">Правила</a><a href="#">Комиссии</a><a href="#">Центр помощи</a></div>
+<div><b>FPRES</b><a href="#">О площадке</a><a href="#">Безопасность</a><a href="#">Условия</a><a href="#">Контакты</a></div>
+</div></footer>
+
+<script>
+const q=document.getElementById('q'), heroQ=document.getElementById('heroQ');
+function sync(v){q.value=v;heroQ.value=v}
+[q,heroQ].forEach(el=>el.addEventListener('input',e=>sync(e.target.value)));
+function addCart(name){alert(name+"\n\nДемо: товар добавлен в корзину.");}
+</script>
+</body></html>
