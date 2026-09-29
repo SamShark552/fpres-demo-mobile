@@ -146,7 +146,10 @@ test("buyer and seller logout controls work", async ({ page }) => {
   await page.locator("[data-logout]").click();
   await expect(page).toHaveURL(/index\.html$/);
   await page.goto(BASE + "/seller-dashboard.html");
-  await page.locator("[data-logout]").click();
+  await page.locator("#sellerLoginPassword").fill("demo-password");
+  await page.locator("[data-seller-enter]").click();
+  await expect(page.locator("h1")).toContainText("Кабинет продавца");
+  await page.locator("[data-logout='seller']").click();
   await expect(page).toHaveURL(/index\.html$/);
 });
 
