@@ -106,7 +106,7 @@ test("support, login and buyer seller separation work", async ({ page }) => {
   await page.goto(BASE + "/");
   await expect(page.locator(".chatFloat")).toContainText("Чаты");
   await expect(page.locator("a[href='seller-dashboard.html']").first()).toHaveCount(1);
-  await page.locator("[data-login]").click();
+  await page.locator(".btn.ghost[href*=\"auth=1\"]").click();
   await expect(page).toHaveURL(/account\.html\?auth=1/);
   await expect(page.locator("#loginModal")).toHaveClass(/show/);
   await page.locator("[data-close]").click();
