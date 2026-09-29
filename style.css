@@ -31,3 +31,5 @@
 .sellerHeaderLink{height:40px;display:inline-flex;align-items:center;padding:0 12px;border:1px solid #2d3747;background:#0b121b;border-radius:10px;color:#a996ff;text-decoration:none;font-size:12px;font-weight:800;white-space:nowrap;transition:.18s}.sellerHeaderLink:hover{color:#fff;border-color:#5a45a0;background:#151326}
 @media(max-width:1040px){.sellerHeaderLink{display:inline-flex}}
 @media(max-width:640px){.sellerHeaderLink{height:38px;padding:0 9px;font-size:10px}.actions{gap:6px}}
+
+.sideLogout{width:100%;margin-top:8px;height:38px;border:1px solid #2d3747;background:#0b121b;border-radius:10px;color:#8f9aad;font:inherit;font-size:11px;cursor:pointer;text-align:left;padding:0 11px}.sideLogout:hover{color:#fff;border-color:#5a45a0;background:#151326}
