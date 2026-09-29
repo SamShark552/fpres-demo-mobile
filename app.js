@@ -28,7 +28,7 @@ function home(){const featured=D.games.slice(0,6),offers=D.games.slice(0,4);docu
       <div class="desktopHeroMain">
         <div class="desktopHeroCopy">
           <div class="desktopEyebrow">НОВИНКА</div>
-          <h1 class="desktopHeroTitle">ARC Raiders</h1>
+          <h1 class="desktopHeroTitle"><span>ЛУТ НАЙДЕН.</span><em>ИГРА НАЧАЛАСЬ.</em></h1>
           <p>Официальные ключи и пополнения</p>
           <span>Быстро. Безопасно. Выгодно.</span>
           <div class="desktopHeroActions"><button class="btn primary" id="heroGo">Купить сейчас <b>→</b></button></div>
