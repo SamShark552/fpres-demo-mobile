@@ -129,6 +129,8 @@ test("support, login and buyer seller separation work", async ({ page }) => {
   await page.locator("[data-enter]").click();
   await expect(page).toHaveURL(/account\.html$/);
   await expect(page.locator("h1")).toContainText("Мой FPRES");
+  await page.locator("[data-logout]").click();
+  await expect(page).toHaveURL(/index\.html$/);
 });
 
 test("buyer and seller logout controls work", async ({ page }) => {
