@@ -95,17 +95,24 @@ test("seller dashboard tabs work", async ({ page }) => {
   await expect(page.locator(".toast")).toContainText("5000");
 });
 
-test("support ticket and login modal work", async ({ page }) => {
+test("support, login and buyer seller separation work", async ({ page }) => {
+  await page.goto(BASE + "/");
+  await page.locator(".trustClickable").click();
+  await expect(page).toHaveURL(/support\.html\?section=order/);
+  await expect(page.locator("h1")).toContainText("Проблема с заказом");
   await page.goto(BASE + "/support.html");
   await page.locator("[data-ticket]").click();
   await expect(page.locator(".toast")).toContainText("FP-HELP-1024");
   await page.goto(BASE + "/");
+  await expect(page.locator(".chatFloat")).toContainText("Чаты");
+  await expect(page.locator("a[href='seller-dashboard.html']").first()).toHaveCount(1);
   await page.locator("[data-login]").click();
   await expect(page.locator("#loginModal")).toHaveClass(/show/);
   await page.locator("#loginName").fill("QA Player");
   await page.locator("#loginEmail").fill("qa@fpres.local");
   await page.locator("[data-enter]").click();
-  await expect(page.locator(".toast")).toContainText("Вход выполнен");
+  await expect(page).toHaveURL(/account\.html$/);
+  await expect(page.locator("h1")).toContainText("Мой FPRES");
 });
 
 test("all internal anchors resolve to existing local documents", async ({ page, request }) => {
