@@ -120,6 +120,19 @@ test("support, login and buyer seller separation work", async ({ page }) => {
   await expect(page.locator("h1")).toContainText("Мой FPRES");
 });
 
+test("buyer and seller logout controls work", async ({ page }) => {
+  await page.goto(BASE + "/account.html?auth=1");
+  await page.locator("#loginName").fill("Logout QA");
+  await page.locator("#loginEmail").fill("logout@fpres.local");
+  await page.locator("[data-enter]").click();
+  await expect(page).toHaveURL(/account\.html$/);
+  await page.locator("[data-logout]").click();
+  await expect(page).toHaveURL(/index\.html$/);
+  await page.goto(BASE + "/seller-dashboard.html");
+  await page.locator("[data-logout]").click();
+  await expect(page).toHaveURL(/index\.html$/);
+});
+
 test("all internal anchors resolve to existing local documents", async ({ page, request }) => {
   await page.goto(BASE + "/");
   const hrefs = await page.locator("a[href]").evaluateAll(as =>
