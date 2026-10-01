@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080D22">
+<title>FPRES — Dark Gradient Preview</title>
+<link rel="stylesheet" href="style.css?v=desktop-v3">
+<script src="data.js"></script>
+<script src="app.js?v=desktop-v3" defer></script>
+<style>
+/* ===== FPRES DARK GRADIENT PREVIEW ===== */
+:root{
+  --fp-bg:#080D22;
+  --fp-surface:rgba(16,25,54,.88);
+  --fp-surface-2:#111A3A;
+  --fp-ink:#F5F3FF;
+  --fp-indigo:#0A102A;
+  --fp-purple:#806BFF;
+  --fp-lime:#CCFF25;
+  --fp-muted:#A7AECA;
+  --fp-line:rgba(128,107,255,.28);
+  --fp-shadow:0 18px 45px rgba(0,0,0,.28);
+  --fp-shadow-hover:0 24px 55px rgba(0,0,0,.38),0 0 28px rgba(128,107,255,.10);
+}
+html,body{background:#080D22!important;color:#F5F3FF!important}
+body{
+  background:
+    radial-gradient(55% 42% at 8% 5%,rgba(128,107,255,.20),transparent 70%),
+    radial-gradient(45% 38% at 93% 12%,rgba(204,255,37,.08),transparent 70%),
+    radial-gradient(55% 45% at 55% 88%,rgba(95,65,210,.14),transparent 72%),
+    linear-gradient(180deg,#080D22 0%,#0B1230 48%,#080D22 100%)!important;
+}
+body:before{
+  background:
+    radial-gradient(32% 28% at 18% 24%,rgba(128,107,255,.20),transparent 72%),
+    radial-gradient(35% 30% at 76% 26%,rgba(103,79,255,.16),transparent 72%),
+    radial-gradient(36% 32% at 54% 76%,rgba(204,255,37,.05),transparent 72%)!important;
+  filter:blur(60px)!important;
+  opacity:.75!important;
+}
+body:after{
+  background:
+    linear-gradient(180deg,rgba(8,13,34,.10),rgba(8,13,34,.38) 58%,rgba(8,13,34,.58))!important;
+}
+.header{
+  background:rgba(8,13,34,.88)!important;
+  border-bottom:1px solid rgba(128,107,255,.34)!important;
+  box-shadow:0 12px 32px rgba(0,0,0,.34)!important;
+}
+.mark{background:var(--fp-lime)!important;color:#0A102A!important;border-color:#050816!important;box-shadow:0 0 22px rgba(204,255,37,.18)!important}
+.brand-name{color:#fff!important}.brand-sub{color:#A8AED0!important}
+.navlinks{color:#C5C9DE!important}.navlinks a:hover{color:var(--fp-lime)!important}
+.search{
+  background:rgba(255,255,255,.045)!important;
+  border:1px solid rgba(128,107,255,.30)!important;
+  color:#fff!important;
+}
+.search:focus{border-color:var(--fp-lime)!important;box-shadow:0 0 0 4px rgba(204,255,37,.10)!important}
+.btn,.iconbtn{
+  background:rgba(255,255,255,.045)!important;
+  color:#F5F3FF!important;
+  border:1px solid rgba(128,107,255,.30)!important;
+}
+.btn:hover,.iconbtn:hover{background:rgba(128,107,255,.15)!important}
+.btn.primary,.gameBuy,.buyWide{
+  background:var(--fp-lime)!important;
+  color:#0A102A!important;
+  border-color:#0A102A!important;
+  box-shadow:0 0 24px rgba(204,255,37,.13)!important;
+}
+.sectionHead h2,.pageTitle,.productTitle{color:#F5F3FF!important}
+.sectionHead a{color:#B8ADFF!important}
+.desktopHome{color:#F5F3FF}
+.desktopHero{background:transparent!important}
+.desktopHeroMain{
+  background:linear-gradient(135deg,#0C1435 0%,#111B40 48%,#0B102B 100%)!important;
+  border-color:rgba(128,107,255,.44)!important;
+  box-shadow:0 24px 55px rgba(0,0,0,.34)!important;
+}
+.desktopHeroMain:after{
+  background:linear-gradient(90deg,rgba(8,13,34,.92) 0%,rgba(8,13,34,.54) 42%,rgba(8,13,34,.04) 72%)!important;
+}
+.desktopHeroTitle span{color:#fff!important}
+.desktopHeroTitle em{color:var(--fp-lime)!important;text-shadow:0 0 24px rgba(204,255,37,.12)}
+.desktopHeroCopy p{color:#E6E5F3!important}
+.desktopHeroCopy>span{color:#AEB4D1!important}
+.desktopEyebrow{background:rgba(128,107,255,.20)!important;border-color:rgba(128,107,255,.45)!important;color:#CFC8FF!important}
+.desktopPromo{
+  background:#101936!important;
+  border-color:rgba(128,107,255,.34)!important;
+  color:#F5F3FF!important;
+  box-shadow:0 14px 30px rgba(0,0,0,.24)!important;
+}
+.desktopPromo:hover{border-color:var(--fp-purple)!important;transform:translateX(-3px)!important}
+.desktopPromo p,.desktopPromo small{color:#9FA7C5!important}
+.promoPass{background:linear-gradient(135deg,#14233B,#172D2C)!important;border-color:rgba(204,255,37,.24)!important}
+.promoKeys{background:linear-gradient(135deg,#151A3C,#21184B)!important}
+.desktopPromo>b{color:var(--fp-lime)!important}
+.desktopSectionHead h2{color:#F5F3FF!important}
+.desktopSectionHead a{color:#AAA0FF!important}
+.desktopPlatform{
+  background:#101936!important;
+  color:#DDE1F2!important;
+  border-color:rgba(128,107,255,.30)!important;
+  box-shadow:0 8px 18px rgba(0,0,0,.18)!important;
+}
+.desktopPlatform:hover,.desktopPlatform.active{background:var(--fp-lime)!important;color:#0A102A!important;border-color:var(--fp-lime)!important}
+.desktopCategory{
+  border-color:rgba(128,107,255,.42)!important;
+  box-shadow:0 14px 28px rgba(0,0,0,.22)!important;
+}
+.catTone1{background:#352C67!important;color:#fff!important}
+.catTone2{background:#263C34!important;color:#fff!important}
+.catTone3{background:#3B326B!important;color:#fff!important}
+.catTone4{background:#28234C!important;color:#fff!important}
+.catTone5{background:#27264A!important;color:#fff!important}
+.catTone6{background:#30295E!important;color:#fff!important}
+.desktopCatIcon{background:rgba(8,13,34,.72)!important;color:var(--fp-lime)!important}
+.desktopCategory small{color:#C3C6D8!important}
+.desktopCategory:hover{border-color:var(--fp-purple)!important;box-shadow:var(--fp-shadow-hover)!important}
+.gameCard{
+  background:rgba(16,25,54,.88)!important;
+  border-color:rgba(128,107,255,.38)!important;
+  box-shadow:0 14px 32px rgba(0,0,0,.24)!important;
+}
+.gameCard:hover{border-color:rgba(204,255,37,.55)!important;box-shadow:0 22px 42px rgba(0,0,0,.34)!important}
+.gameCover{background:#111831!important}
+.gameTitle{color:#F5F3FF!important}.gameMeta{color:#AAB1CC!important}
+.gamePrice{color:#CCFF25!important}
+.gameBuy{background:#CCFF25!important;color:#0A102A!important}
+.desktopRailCard{
+  background:rgba(16,25,54,.90)!important;
+  border-color:rgba(128,107,255,.34)!important;
+  color:#F5F3FF!important;
+  box-shadow:0 14px 32px rgba(0,0,0,.24)!important;
+}
+.desktopRailHead h3,.desktopHelp h3{color:#F5F3FF!important}
+.desktopRailHead a,.desktopHelp>b{color:#AAA0FF!important}
+.desktopOffer{color:#EDEFFF!important;border-top-color:rgba(128,107,255,.18)!important}
+.desktopOffer:hover{background:rgba(128,107,255,.10)!important}
+.desktopOffer small{color:#929AB8!important}.desktopOffer strong{color:var(--fp-lime)!important}
+.desktopNewsletter{background:linear-gradient(145deg,#161D43,#22184A)!important}
+.desktopNewsletter p{color:#AEB5D0!important}
+.desktopNewsForm input{background:rgba(255,255,255,.06)!important;border-color:rgba(128,107,255,.34)!important}
+.desktopNewsForm button{background:var(--fp-lime)!important;color:#0A102A!important}
+.desktopHelp{background:rgba(16,25,54,.90)!important}
+.desktopTrust>div{
+  background:rgba(16,25,54,.82)!important;
+  border-color:rgba(128,107,255,.30)!important;
+  box-shadow:0 12px 28px rgba(0,0,0,.22)!important;
+}
+.desktopTrust b{color:#F5F3FF!important}.desktopTrust small{color:#9FA7C5!important}
+.desktopTrust span{background:var(--fp-lime)!important;color:#0A102A!important}
+.footer{
+  background:#070B1C!important;
+  border-top:1px solid rgba(128,107,255,.32)!important;
+}
+.footer p,.footer a{color:#929AB8!important}.footer a:hover{color:var(--fp-lime)!important}
+.chatFloat{background:var(--fp-lime)!important;color:#0A102A!important;border-color:#0A102A!important;box-shadow:0 12px 30px rgba(0,0,0,.42)!important}
+@media(max-width:1100px){.desktopRightRail{display:none}}
+</style>
+</head>
+<body><main></main></body>
+</html>
