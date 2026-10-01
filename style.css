@@ -609,3 +609,32 @@ body:before,body:after{content:none!important}
 .stat small{color:#8E9AAF!important}
 .stat strong{color:#F4F6FB!important}
 .accountLayout .panel{background:linear-gradient(145deg,#101722,#0D1520)!important}
+
+
+/* ===== FPRES READABILITY + SIMPLE F LOGO FINAL ===== */
+.mark{background:linear-gradient(145deg,#C084FC,#8F5CFF)!important;color:#fff!important;border:1px solid rgba(255,255,255,.22)!important;box-shadow:0 0 18px rgba(143,92,255,.16)!important}
+.profileHero h2,.profileHero p,.stat,.stat strong,.panel h3,.panel p,.sideNav a,
+.pageTitle,.breadcrumbs,.accountLayout section,.chatList,.chatThread,
+.chatThread b,.chatThread span,.chatBox,.bubble,.chatComposer input,.chatComposer .btn{
+  text-shadow:none!important;
+}
+.pageTitle,.profileHero h2,.stat strong,.panel h3{color:#F4F6FB!important}
+.profileHero p,.panel p,.chatThread span,.breadcrumbs,.stat small,.fieldBlock label{
+  color:#93A0B4!important
+}
+.sideNav{background:linear-gradient(145deg,#0D1622,#0B121B)!important}
+.sideNav a{color:#B9C3D2!important}
+.sideNav a.active,.sideNav a:hover{background:#1A1730!important;color:#fff!important}
+.chatList,.chatBox{background:linear-gradient(145deg,#0D1622,#0B121B)!important}
+.chatThread{border-color:#27364D!important}
+.chatThread.active,.chatThread:hover{background:#171631!important}
+.chatThread b{color:#F4F6FB!important}
+.chatThread span{color:#93A0B4!important}
+.bubble{background:#121D2C!important;color:#E5EAF2!important;border-color:#2A3B54!important}
+.bubble.me{background:#25194A!important;color:#F0E8FF!important;border-color:#6748AD!important}
+.chatComposer input{color:#F4F6FB!important}
+.chatComposer input::placeholder{color:#728098!important}
+.stat{background:linear-gradient(145deg,#101722,#0D1520)!important}
+.stat small{color:#8E9AAF!important}
+.stat strong{color:#F4F6FB!important}
+.accountLayout .panel{background:linear-gradient(145deg,#101722,#0D1520)!important}
