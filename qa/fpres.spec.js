@@ -119,6 +119,8 @@ test("support, login and buyer seller separation work", async ({ page }) => {
   await expect(page.locator(".toast")).toContainText("FP-HELP-1024");
   await page.goto(BASE + "/");
   await expect(page.locator(".chatFloat")).toContainText("Чаты");
+  await page.goto(BASE + "/account.html");
+  await expect(page.locator(".sellerEntry")).toHaveCount(0);
   await expect(page.locator("a[href='seller-dashboard.html']").first()).toHaveCount(1);
   await page.locator(".btn.ghost[href*=\"auth=1\"]").click();
   await expect(page).toHaveURL(/account\.html\?auth=1/);
