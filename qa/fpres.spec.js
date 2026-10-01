@@ -112,9 +112,8 @@ test("seller authentication, dashboard and logout work", async ({ page }) => {
 
 test("support, login and buyer seller separation work", async ({ page }) => {
   await page.goto(BASE + "/");
-  await page.locator(".trustClickable").click();
-  await expect(page).toHaveURL(/support\.html\?section=order/);
-  await expect(page.locator("h1")).toContainText("Проблема с заказом");
+  await expect(page.locator(".desktopTrust")).toHaveCount(0);
+  await expect(page.locator(".desktopNewsletter")).toHaveCount(0);
   await page.goto(BASE + "/support.html");
   await page.locator("[data-ticket]").click();
   await expect(page.locator(".toast")).toContainText("FP-HELP-1024");
