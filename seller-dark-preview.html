@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080D22">
+<title>FPRES — Seller Dark Preview</title>
+<link rel="stylesheet" href="style.css?v=desktop-v3">
+<script src="data.js"></script>
+<script src="app.js?v=desktop-v3" defer></script>
+<style>
+/* ===== SELLER DARK GRADIENT LOCAL PREVIEW ===== */
+html,body{background:#080D22!important;color:#F5F3FF!important}
+body.sellerDarkPreview{
+  background:
+    radial-gradient(60% 40% at 8% 4%,rgba(128,107,255,.18),transparent 68%),
+    radial-gradient(48% 38% at 94% 16%,rgba(204,255,37,.07),transparent 70%),
+    linear-gradient(180deg,#080D22 0%,#0A1130 48%,#080D22 100%)!important;
+}
+body.sellerDarkPreview:before{
+  content:"";position:fixed;inset:-15%;z-index:-2;pointer-events:none;
+  background:
+    repeating-linear-gradient(112deg,transparent 0 150px,rgba(128,107,255,.09) 151px,transparent 153px 285px),
+    repeating-linear-gradient(22deg,transparent 0 210px,rgba(204,255,37,.035) 211px,transparent 213px 390px),
+    radial-gradient(35% 30% at 24% 20%,rgba(128,107,255,.18),transparent 72%),
+    radial-gradient(35% 30% at 78% 72%,rgba(76,52,180,.14),transparent 72%);
+  filter:blur(.2px);
+  transform:rotate(-4deg) scale(1.08);
+  opacity:.9;
+}
+body.sellerDarkPreview:after{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    linear-gradient(90deg,transparent 0 18%,rgba(128,107,255,.055) 18.1%,transparent 18.3% 72%,rgba(128,107,255,.045) 72.1%,transparent 72.3%),
+    linear-gradient(180deg,rgba(8,13,34,.08),rgba(8,13,34,.40) 58%,rgba(8,13,34,.62));
+}
+.sellerDarkPreview .header{
+  background:rgba(8,13,34,.90)!important;
+  border-bottom:1px solid rgba(128,107,255,.35)!important;
+  box-shadow:0 12px 32px rgba(0,0,0,.34)!important;
+}
+.sellerDarkPreview .mark{background:#CCFF25!important;color:#0A102A!important;border-color:#050816!important;box-shadow:0 0 22px rgba(204,255,37,.15)!important}
+.sellerDarkPreview .brand-name{color:#fff!important}.sellerDarkPreview .brand-sub{color:#9FA7C5!important}
+.sellerDarkPreview .navlinks{color:#C5C9DE!important}.sellerDarkPreview .navlinks a:hover{color:#CCFF25!important}
+.sellerDarkPreview .search{background:rgba(255,255,255,.045)!important;border-color:rgba(128,107,255,.30)!important;color:#fff!important}
+.sellerDarkPreview .search:focus{border-color:#CCFF25!important;box-shadow:0 0 0 4px rgba(204,255,37,.10)!important}
+.sellerDarkPreview .btn,.sellerDarkPreview .iconbtn,.sellerDarkPreview .sellerHeaderLink{
+  background:rgba(255,255,255,.045)!important;color:#F5F3FF!important;border-color:rgba(128,107,255,.30)!important;
+}
+.sellerDarkPreview .btn.primary,.sellerDarkPreview .gameBuy,.sellerDarkPreview .buyWide{
+  background:#CCFF25!important;color:#0A102A!important;border-color:#0A102A!important;
+  box-shadow:0 0 24px rgba(204,255,37,.12)!important;
+}
+.sellerDarkPreview .pageTitle,.sellerDarkPreview .sectionHead h2,.sellerDarkPreview .breadcrumbs{color:#F5F3FF!important}
+.sellerDarkPreview .breadcrumbs a,.sellerDarkPreview .sectionHead a{color:#AAA0FF!important}
+.sellerDarkPreview .accountLayout{gap:18px}
+.sellerDarkPreview .sideNav{
+  background:rgba(10,16,42,.88)!important;
+  border:1px solid rgba(128,107,255,.32)!important;
+  box-shadow:0 18px 42px rgba(0,0,0,.26)!important;
+}
+.sellerDarkPreview .sideNav a{color:#AEB5D0!important;border-bottom-color:rgba(128,107,255,.14)!important}
+.sellerDarkPreview .sideNav a:hover,.sellerDarkPreview .sideNav a.active{
+  background:rgba(128,107,255,.13)!important;color:#fff!important;
+  box-shadow:inset 3px 0 #CCFF25!important;
+}
+.sellerDarkPreview .sideNav a.active span{color:#CCFF25!important}
+.sellerDarkPreview .sideNav b{color:#fff!important}
+.sellerDarkPreview .sellerAuth,
+.sellerDarkPreview .panel,
+.sellerDarkPreview .metric,
+.sellerDarkPreview .chart,
+.sellerDarkPreview .listPanel,
+.sellerDarkPreview .table,
+.sellerDarkPreview .dashboardHero,
+.sellerDarkPreview .notice{
+  background:rgba(16,25,54,.88)!important;
+  color:#F5F3FF!important;
+  border-color:rgba(128,107,255,.32)!important;
+  box-shadow:0 18px 42px rgba(0,0,0,.25)!important;
+}
+.sellerDarkPreview .dashboardHero{
+  background:linear-gradient(135deg,#101936,#171E46 55%,#111534)!important;
+}
+.sellerDarkPreview .dashboardHero h2,.sellerDarkPreview .sellerAuth h1,.sellerDarkPreview .panel h3,.sellerDarkPreview .chart h3,.sellerDarkPreview .listPanel h3{color:#F5F3FF!important}
+.sellerDarkPreview .dashboardHero p,.sellerDarkPreview .metric small,.sellerDarkPreview .fieldBlock label,.sellerDarkPreview .tableRow>div,.sellerDarkPreview .sellerAuth p{color:#9FA7C5!important}
+.sellerDarkPreview .metric strong{color:#CCFF25!important}
+.sellerDarkPreview .metric label{color:#C6CBDF!important}
+.sellerDarkPreview .table{overflow:hidden}
+.sellerDarkPreview .tableRow{border-color:rgba(128,107,255,.14)!important}
+.sellerDarkPreview .tableRow.head{background:rgba(128,107,255,.10)!important;color:#DCE0F2!important}
+.sellerDarkPreview .status{color:#CCFF25!important}
+.sellerDarkPreview .field{
+  background:rgba(255,255,255,.045)!important;color:#fff!important;border-color:rgba(128,107,255,.30)!important;
+}
+.sellerDarkPreview .field:focus{border-color:#CCFF25!important;box-shadow:0 0 0 3px rgba(204,255,37,.09)!important}
+.sellerDarkPreview .dashIcon{
+  background:#CCFF25!important;color:#0A102A!important;
+  box-shadow:0 0 22px rgba(204,255,37,.10)!important;
+}
+.sellerDarkPreview .bar{background:linear-gradient(180deg,#806BFF,#4B3DB0)!important;box-shadow:0 0 18px rgba(128,107,255,.16)}
+.sellerDarkPreview .barLabel{color:#8F98B7!important}
+.sellerDarkPreview .listItem{border-bottom-color:rgba(128,107,255,.14)!important}
+.sellerDarkPreview .listItem b{color:#CCFF25!important}
+.sellerDarkPreview .chatFloat{background:#CCFF25!important;color:#0A102A!important;border-color:#0A102A!important}
+.sellerDarkPreview .footer{background:#070B1C!important;border-top-color:rgba(128,107,255,.30)!important}
+.sellerDarkPreview .footer p,.sellerDarkPreview .footer a{color:#929AB8!important}
+.sellerDarkPreview .footer a:hover{color:#CCFF25!important}
+</style>
+</head>
+<body class="sellerDarkPreview"><main></main></body>
+</html>
