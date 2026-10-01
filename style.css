@@ -547,3 +547,35 @@ body:before,body:after{content:none!important}
   .chatFloat{right:14px!important;bottom:14px!important;width:50px!important;min-width:50px!important;height:50px!important;padding:0!important}
   .chatFloatText{display:none}
 }
+
+/* ===== FPRES DARK GRADIENT + PLATFORM ICONS FINAL ===== */
+html,body{background:#070B11!important}
+body{
+  min-height:100%;
+  background:
+    radial-gradient(55% 42% at 78% 2%,rgba(143,92,255,.20),transparent 70%),
+    radial-gradient(42% 34% at 10% 38%,rgba(192,132,252,.08),transparent 70%),
+    linear-gradient(145deg,#05080D 0%,#080F18 42%,#0D1021 74%,#070B11 100%)!important;
+}
+body:before,body:after{content:none!important}
+.desktopPlatform,.platformChip{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+}
+.desktopPlatform .platformIcon,.platformChip .platformIcon{
+  width:19px;height:19px;display:block;stroke:currentColor;fill:none;
+  stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto;
+}
+.desktopPlatform .platformWordIcon,.platformChip .platformWordIcon{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:28px;height:19px;padding:0 3px;border:1px solid currentColor;border-radius:5px;
+  font-size:8px;font-weight:950;letter-spacing:-.02em;line-height:1;
+}
+.platformIconBox{display:inline-flex}
+.desktopPlatform.active .platformIcon,.desktopPlatform:hover .platformIcon,
+.platformChip.active .platformIcon,.platformChip:hover .platformIcon{color:currentColor}
+.desktopCategoryGrid,.desktopGamesSection,.desktopContentGrid,.desktopSection{background:transparent!important}
+.desktopTrust{display:none!important}
+.desktopNewsletter{display:none!important}
+@media(max-width:760px){
+  .desktopPlatform .platformIcon,.platformChip .platformIcon{width:18px;height:18px}
+}
