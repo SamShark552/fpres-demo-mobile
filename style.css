@@ -638,3 +638,20 @@ body:before,body:after{content:none!important}
 .stat small{color:#8E9AAF!important}
 .stat strong{color:#F4F6FB!important}
 .accountLayout .panel{background:linear-gradient(145deg,#101722,#0D1520)!important}
+
+/* ===== REAL BRAND LOGOS + READABLE DARK GRADIENT FINAL ===== */
+html,body{background:#070B11!important;color:#F4F6FB!important}
+body{background:radial-gradient(54% 40% at 84% 0%,rgba(192,132,252,.20),transparent 72%),radial-gradient(42% 34% at 12% 34%,rgba(143,92,255,.10),transparent 74%),linear-gradient(145deg,#070B11 0%,#0A0F1A 43%,#0D1020 73%,#070B11 100%)!important}
+body:before,body:after{content:none!important}
+.page,.section,.desktopHome,.desktopSection,.desktopGamesSection,.desktopContentGrid,.desktopCategoryGrid{background:transparent!important}
+.pageTitle,.sectionHead h2,.desktopSectionHead h2,.profileHero h2,.panel h3,.chatBox h1{color:#F8FAFF!important}
+.breadcrumbs,.gameMeta,.resultCount,.productMeta,.panel p,.profileHero p,.stat small,.chatThread span,.faqCard p,.infoCard p,.dashMain p,.metric label,.fieldBlock label{color:#B5C0D0!important}
+.sideNav a,.chatThread b{color:#E2E8F0!important}
+.chatThread.active b,.chatThread:hover b{color:#fff!important}
+.desktopPlatform,.platformChip{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:9px!important;color:#DCE3ED!important;background:linear-gradient(145deg,#101925,#0C131E)!important;border-color:#30425B!important}
+.desktopPlatform:hover,.desktopPlatform.active,.platformChip:hover,.platformChip.active{color:#fff!important;background:linear-gradient(145deg,#191431,#151A2B)!important;border-color:#C084FC!important;box-shadow:0 0 22px rgba(192,132,252,.16)!important}
+.brandPlatformIcon{width:21px!important;height:21px!important;display:block!important;object-fit:contain!important;filter:brightness(0) invert(1)!important;flex:0 0 auto!important}
+.platformBrands{display:inline-flex!important;align-items:center!important;gap:5px!important}.platformBrands img{width:19px!important;height:19px!important;display:block!important;filter:brightness(0) invert(1)!important}
+.allPlatformIcon{width:20px;height:20px;display:inline-grid;place-items:center;color:#C084FC;font-size:16px;font-weight:900;flex:0 0 auto}.desktopPlatform.active .allPlatformIcon,.desktopPlatform:hover .allPlatformIcon,.platformChip.active .allPlatformIcon,.platformChip:hover .allPlatformIcon{color:#A3E635}
+.chatFloat{background:#A3E635!important;color:#182014!important;border-color:#83BD2A!important;box-shadow:0 0 24px rgba(163,230,53,.24),0 12px 30px rgba(0,0,0,.36)!important}.chatFloat:hover{background:#B7F24B!important;color:#182014!important;border-color:#A3E635!important;box-shadow:0 0 30px rgba(163,230,53,.34),0 14px 34px rgba(0,0,0,.38)!important}
+.chatFloatIcon{filter:none!important}
