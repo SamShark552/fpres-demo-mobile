@@ -498,3 +498,52 @@ body:before{content:"";position:fixed;inset:-18%;z-index:-2;pointer-events:none;
   .heroMain{border-radius:19px}.desktopHeroMain{border-radius:20px}
 }
 
+
+/* ===== FPRES BACKGROUND / FLOATING CHAT FINAL FIX ===== */
+html,body{min-height:100%;background:#070B11!important}
+body{
+  background:#070B11!important;
+  color:#F4F6FB!important;
+  overflow-x:hidden;
+}
+body:before,body:after{content:none!important}
+.header{background:rgba(7,11,17,.97)!important;border-bottom:1px solid rgba(192,132,252,.18)!important;box-shadow:0 8px 28px rgba(0,0,0,.32)!important}
+.hero,.page,.desktopHome{background:transparent!important}
+.desktopHero{background:transparent!important}
+.desktopSection,.desktopGamesSection,.desktopTrust{background:transparent!important}
+.section{background:transparent!important}
+.desktopHeroMain{background:#0F1722!important}
+.gameGrid,.desktopGameGrid,.desktopCategoryGrid,.desktopPlatformRow,.desktopTrust{background:transparent!important}
+
+/* The approved chat control lives separately on the right side of the screen. */
+.chatFloat{
+  display:flex!important;
+  position:fixed!important;
+  right:22px!important;
+  bottom:22px!important;
+  z-index:80!important;
+  min-width:52px!important;
+  height:52px!important;
+  padding:0 16px!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:8px!important;
+  text-decoration:none!important;
+  border:1px solid rgba(192,132,252,.72)!important;
+  border-radius:15px!important;
+  background:#111827!important;
+  color:#F4F6FB!important;
+  box-shadow:0 0 24px rgba(143,92,255,.18),0 12px 28px rgba(0,0,0,.35)!important;
+  transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease!important;
+}
+.chatFloat:hover{
+  transform:translateY(-2px)!important;
+  border-color:#C084FC!important;
+  box-shadow:0 0 30px rgba(143,92,255,.30),0 16px 32px rgba(0,0,0,.38)!important;
+}
+.chatFloatIcon{font-size:19px;line-height:1}
+.chatFloatText{font-size:11px;font-weight:900;letter-spacing:.02em}
+@media(max-width:760px){
+  .chatFloat{right:14px!important;bottom:14px!important;width:50px!important;min-width:50px!important;height:50px!important;padding:0!important}
+  .chatFloatText{display:none}
+}
