@@ -655,3 +655,62 @@ body:before,body:after{content:none!important}
 .allPlatformIcon{width:20px;height:20px;display:inline-grid;place-items:center;color:#C084FC;font-size:16px;font-weight:900;flex:0 0 auto}.desktopPlatform.active .allPlatformIcon,.desktopPlatform:hover .allPlatformIcon,.platformChip.active .allPlatformIcon,.platformChip:hover .allPlatformIcon{color:#A3E635}
 .chatFloat{background:#A3E635!important;color:#182014!important;border-color:#83BD2A!important;box-shadow:0 0 24px rgba(163,230,53,.24),0 12px 30px rgba(0,0,0,.36)!important}.chatFloat:hover{background:#B7F24B!important;color:#182014!important;border-color:#A3E635!important;box-shadow:0 0 30px rgba(163,230,53,.34),0 14px 34px rgba(0,0,0,.38)!important}
 .chatFloatIcon{filter:none!important}
+
+
+/* ===== FPRES VISUAL CLEANUP V6 (readability, lighter borders, compact mobile header) ===== */
+
+/* 1. Читаемость: тёмный текст из старой светлой темы больше не попадает на тёмные карточки */
+.offer,.spec,.cartItem,.cartSummary,.stat,.profileHero,.panel,.detailPanel,.mediaPanel,.gameCard,.deal,.sellerCard,.filters,.faqCard,.infoCard,.orderHero,.notice{color:#E8EDF5!important}
+.bigPrice{color:#fff!important;font-size:30px;letter-spacing:-.02em}
+.spec small,.offer span{color:#98A5B8!important}
+.spec b,.offer b{color:#F4F6FB!important}
+.offer b{font-size:13px}
+.offer>div:nth-child(2) b{color:var(--green,#A3E635)!important;font-size:15px}
+.spec{border-radius:12px!important;padding:11px 12px!important}
+
+/* 2. Рамки тоньше: вместо толстых 2px — аккуратные 1px */
+.gameCard,.deal,.trustCard,.sellerCard,.filters,.panel,.mediaPanel,.detailPanel,.chatList,.chatBox,.faqCard,.infoCard,.sellerEntry,.orderHero,.notice,.sellerAuth,.offer,.spec,.cartItem,.cartSummary,.stat,.profileHero,.cat,.categories .cat,.platformChip,.btn,.iconbtn,.field,.select,.priceRow input,.chatComposer input,.sideNav,.favGame{border-width:1px!important}
+.gameCard,.deal,.offer,.cat,.categories .cat,.sellerCard,.panel,.detailPanel,.mediaPanel,.cartItem,.cartSummary{border-color:rgba(192,132,252,.26)!important;border-radius:16px!important}
+.gameCard:hover,.cat:hover,.categories .cat:hover{border-color:rgba(192,132,252,.7)!important}
+.gameCard,.cat,.categories .cat,.offer{box-shadow:0 8px 22px rgba(0,0,0,.28)!important}
+.cat,.categories .cat{min-height:0!important;padding:14px!important}
+.cat b{color:#F4F6FB!important;font-size:13px!important}
+.cat span{color:#93A0B4!important;opacity:1!important}
+
+/* 3. Кнопки: спокойнее и ровнее */
+.gameBuy,.miniBuy,.buyWide{border:0!important;border-radius:11px!important;box-shadow:none!important}
+.buyWide{height:46px;font-size:14px}
+.btn.primary{border-width:1px!important}
+
+/* 4. Плавающая кнопка чата: меньше и не перекрывает контент */
+.chatFloat{width:44px!important;min-width:44px!important;height:44px!important;border-radius:13px!important;right:12px!important;bottom:14px!important;opacity:.94;box-shadow:0 6px 18px rgba(0,0,0,.4)!important}
+.chatFloat:hover{opacity:1}
+body{padding-bottom:64px}
+
+/* 5. Заголовки и отступы на мобильном */
+@media(max-width:760px){
+  .container{width:calc(100% - 28px)}
+  .nav{flex-wrap:wrap;gap:10px;min-height:0;padding:10px 0}
+  .brand{min-width:0;flex:1}
+  .actions{gap:6px;flex:0 0 auto}
+  .sellerHeaderLink{display:none!important}
+  .iconbtn,.actions .btn{height:40px}
+  .navsearch{order:3;flex:1 0 100%;max-width:none;margin:0}
+  .search{height:42px}
+  .hero{padding:16px 0 8px}
+  .pageTitle{font-size:28px;margin-bottom:14px}
+  .productTitle{font-size:28px}
+  .page{padding:20px 0}
+  .section{padding:18px 0}
+  .sectionHead h2{font-size:19px}
+  .gameGrid{gap:10px}
+  .gameBody{padding:11px}
+  .gameBottom{flex-wrap:wrap}
+  .offer{grid-template-columns:1fr auto!important;gap:8px 10px!important}
+  .offer .miniBuy{grid-column:1/-1;width:100%;height:40px}
+}
+@media(max-width:760px){
+  .sectionHead{align-items:center}
+  .sectionHead h2{font-size:18px;line-height:1.2}
+  .sectionHead a{white-space:nowrap;font-size:12px}
+}
