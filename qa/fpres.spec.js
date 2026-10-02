@@ -178,7 +178,7 @@ test("support ticket and withdrawal produce one toast each", async ({ page }) =>
   await page.locator("#withdrawAmount").fill("5000");
   await page.locator("[data-withdraw]").click();
   await expect(page.locator(".toast")).toHaveCount(1);
-  await expect(page.locator(".toast")).toContainText(/5[\\s\\u00a0]*000/);
+  await expect(page.locator(".toast")).toContainText(/5[\s\u00a0]*000/);
 });
 
 test("all internal anchors on every route resolve to existing local documents", async ({ page, request }) => {
