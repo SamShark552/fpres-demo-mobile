@@ -154,16 +154,49 @@ test("buyer and seller logout controls work", async ({ page }) => {
   await expect(page).toHaveURL(/index\.html$/);
 });
 
-test("all internal anchors resolve to existing local documents", async ({ page, request }) => {
-  await page.goto(BASE + "/");
-  const hrefs = await page.locator("a[href]").evaluateAll(as =>
-    as.map(a => a.getAttribute("href")).filter(Boolean)
-      .filter(h => !h.startsWith("#") && !h.startsWith("http") && !h.startsWith("mailto:"))
-  );
-  const unique = [...new Set(hrefs.map(h => h.split("?")[0]).filter(h => h.endsWith(".html") || h === "/"))];
-  for (const href of unique) {
-    const url = href === "/" ? BASE + "/" : BASE + "/" + href.replace(/^\//, "");
-    const res = await request.get(url);
-    expect(res.status(), "broken internal link: " + href).toBe(200);
+test("chat sends exactly one buyer bubble and one reply", async ({ page }) => {
+  await page.goto(BASE + "/chat.html?seller=gamekey");
+  await page.locator("#chatInput").fill("Тестовое сообщение");
+  await page.locator("[data-send-chat]").click();
+  await expect(page.locator(".bubble.me")).toHaveCount(1);
+  await expect(page.locator(".bubble.me")).toContainText("Тестовое сообщение");
+  await expect(page.locator(".toast")).toHaveCount(1);
+  await expect(page.locator(".toast")).toContainText("Сообщение отправлено");
+  await expect(page.locator(".bubble:not(.me)").last()).toContainText("Спасибо за сообщение", { timeout: 2000 });
+});
+
+test("support ticket and withdrawal produce one toast each", async ({ page }) => {
+  await page.goto(BASE + "/support.html");
+  await page.locator("[data-ticket]").click();
+  await expect(page.locator(".toast")).toHaveCount(1);
+  await expect(page.locator(".toast")).toContainText("FP-HELP-1024");
+
+  await page.goto(BASE + "/seller-dashboard.html");
+  await page.locator("#sellerLoginPassword").fill("demo-password");
+  await page.locator("[data-seller-enter]").click();
+  await page.goto(BASE + "/seller-dashboard.html?tab=finance");
+  await page.locator("#withdrawAmount").fill("5000");
+  await page.locator("[data-withdraw]").click();
+  await expect(page.locator(".toast")).toHaveCount(1);
+  await expect(page.locator(".toast")).toContainText(/5\\s*000/);
+});
+
+test("all internal anchors on every route resolve to existing local documents", async ({ page, request }) => {
+  const checked = new Set();
+  for (const route of routes) {
+    await page.goto(BASE + route);
+    const hrefs = await page.locator("a[href]").evaluateAll(as =>
+      as.map(a => a.getAttribute("href")).filter(Boolean)
+        .filter(h => !h.startsWith("#") && !h.startsWith("http") && !h.startsWith("mailto:"))
+    );
+    for (const href of hrefs) {
+      const clean = href.split("?")[0];
+      if (!clean.endsWith(".html") && clean !== "/") continue;
+      if (checked.has(clean)) continue;
+      checked.add(clean);
+      const url = clean === "/" ? BASE + "/" : BASE + "/" + clean.replace(/^\//, "");
+      const res = await request.get(url);
+      expect(res.status(), "broken internal link: " + clean + " discovered from " + route).toBe(200);
+    }
   }
 });
