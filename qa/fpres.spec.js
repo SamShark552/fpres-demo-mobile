@@ -103,7 +103,7 @@ test("seller authentication, dashboard and logout work", async ({ page }) => {
   await page.goto(BASE + "/seller-dashboard.html?tab=finance");
   await page.locator("#withdrawAmount").fill("5000");
   await page.locator("[data-withdraw]").click();
-  await expect(page.locator(".toast")).toContainText(/5[\s\u00a0]*000/);
+  expect((await page.locator(".toast").innerText()).replace(/\u00a0/g, " ")).toContain("5 000");
   await page.locator("[data-logout='seller']").click();
   await expect(page).toHaveURL(/index\.html$/);
   await page.goto(BASE + "/seller-dashboard.html");
