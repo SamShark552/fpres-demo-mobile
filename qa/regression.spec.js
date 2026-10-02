@@ -87,6 +87,8 @@ test.describe("FPRES regression", () => {
   test("favorites toggle and catalog search work", async ({ page }) => {
     await page.goto(BASE + "/catalog.html");
     const fav = page.locator("[data-fav-game]").first();
+    const initiallyActive = await fav.evaluate(el => el.classList.contains("active"));
+    if (initiallyActive) await fav.click();
     await fav.click();
     await expect(fav).toHaveClass(/active/);
     await fav.click();
