@@ -49,7 +49,8 @@ games:[
 {id:"1237950",name:"STAR WARS Battlefront II",platform:"EA App",group:"EA / Epic",region:"GLOBAL",price:1199,rating:4.85,reviews:13124,seller:"KeyStore",genre:"Shooter / Action"},
 {id:"1517290",name:"Battlefield 2042",platform:"EA App",group:"EA / Epic",region:"GLOBAL",price:1499,rating:4.76,reviews:11242,seller:"PlayMarket",genre:"Shooter"},
 {id:"1222680",name:"Need for Speed Heat",platform:"EA App",group:"EA / Epic",region:"GLOBAL",price:999,rating:4.83,reviews:9732,seller:"DigitalLab",genre:"Racing"},
-{id:"1262540",name:"Need for Speed Unbound",platform:"EA App",group:"EA / Epic",region:"GLOBAL",price:1299,rating:4.79,reviews:6214,seller:"GameHub",genre:"Racing"}
+{id:"1262540",name:"Need for Speed Unbound",platform:"EA App",group:"EA / Epic",region:"GLOBAL",price:1299,rating:4.79,reviews:6214,seller:"GameHub",genre:"Racing"},
+{id:"1808500",name:"ARC Raiders",platform:"Steam",group:"Steam",region:"GLOBAL",price:2499,rating:4.94,reviews:3120,seller:"GameKey",genre:"Shooter / Extraction"}
 ],
 sellers:[
 {slug:"gamekey",name:"GameKey",rating:4.98,sales:12842,success:99.7,online:true},
