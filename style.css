@@ -1102,3 +1102,34 @@ body{padding-bottom:70px}
 .cht-thread.on .cTxt small{color:#28321D!important}
 .cht-thread.on>em{color:#3D471E!important}
 .cht-thread.on .px-avatar{color:#10152F!important}
+
+/* ===== FINAL GAME COVER BOUNDS FIX ===== */
+.gameCard .gameCover{
+  position:relative!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:16/9!important;
+  overflow:hidden!important;
+  isolation:isolate!important;
+  background:#0B0E3A!important;
+}
+.gameCard .gameCover img{
+  position:absolute!important;
+  inset:0!important;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  min-width:0!important;
+  min-height:0!important;
+  max-width:none!important;
+  max-height:none!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  transform:none;
+}
+.gameCard:hover .gameCover img{
+  transform:scale(1.015)!important;
+  transform-origin:center!important;
+}
