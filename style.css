@@ -1092,3 +1092,13 @@ body{padding-bottom:70px}
   .gameTitle{font-size:13px!important}
   .gameMeta{font-size:10px!important}
 }
+
+/* ===== CHAT THREAD TEXT CONTRAST FIX ===== */
+.cht-thread{color:#F4F6FF!important}
+.cht-thread .cTxt b{color:#FFFFFF!important;text-shadow:0 1px 2px rgba(0,0,0,.35)!important}
+.cht-thread .cTxt small{color:#D5DCF2!important}
+.cht-thread>em{color:#C5CEE6!important}
+.cht-thread.on .cTxt b{color:#10152F!important}
+.cht-thread.on .cTxt small{color:#28321D!important}
+.cht-thread.on>em{color:#3D471E!important}
+.cht-thread.on .px-avatar{color:#10152F!important}
