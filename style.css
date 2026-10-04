@@ -1019,3 +1019,76 @@ body{padding-bottom:70px}
 .supHero{display:grid;gap:8px}.supHero h2{margin:0;color:#F5F7FF;font-size:23px}.supHero p{margin:0;color:#AAB5CA}.supStats{display:flex;gap:14px;flex-wrap:wrap;color:#AAB5CA;font-size:11px;margin-top:3px}.supStats span{display:inline-flex;align-items:center;gap:5px}.supStats svg{width:15px;color:#C6F521}.supGrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.supCard{display:grid;grid-template-columns:32px minmax(0,1fr) auto;align-items:center;gap:11px;padding:15px;min-height:128px}.supCard .cIco{width:27px;height:27px;color:#A996FF}.supCard .cTxt h3{margin:0;color:#F5F7FF;font-size:14px}.supCard .cTxt p{margin:5px 0 0;color:#98A5BC;font-size:10px;line-height:1.45}.supCard .btn,.supCard .px-btn{white-space:nowrap}.infoLayout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:14px}.infoNav{display:grid;align-content:start;gap:6px}.infoNav .pxNav{justify-content:flex-start}.infoMain{min-width:0}.infoText{color:#AAB5CA;line-height:1.65}.infoTiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.infoTile{display:flex;gap:10px;align-items:flex-start;padding:14px}.infoTile .cIco{width:24px;color:#A996FF}.infoTile .cTxt b{display:block;color:#F5F7FF}.infoTile .cTxt small{display:block;color:#8F9BB5;margin-top:3px}.faqList{display:grid;gap:8px}.faqItem{padding:13px}.faqItem summary{cursor:pointer;color:#F5F7FF;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:10px}.faqItem summary::-webkit-details-marker{display:none}.faqItem p{color:#AAB5CA;font-size:11px;line-height:1.6;margin:10px 0 0}.sdGrid{grid-template-columns:1.25fr .75fr}.sd-bars{height:230px;display:flex;align-items:end;gap:10px;padding:12px 5px}.sd-col{height:100%;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:end;gap:5px}.sd-col em{font-style:normal;color:#9AA6C0;font-size:9px}.sd-bar{width:100%;max-width:34px;min-height:8px;background:linear-gradient(#C6F521,#7F8F22);border-radius:7px 7px 2px 2px}.sd-col span{color:#7180A2;font-size:9px}.sd-list{display:grid;gap:5px}.sd-li{display:grid;grid-template-columns:28px 1fr auto;align-items:center;gap:8px;padding:9px;border-bottom:1px solid rgba(124,108,255,.13)}.sd-li .no{color:#C6F521;font-weight:900}.sd-li .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sd-table{overflow:auto;border:1px solid rgba(124,108,255,.2);border-radius:12px}.sd-row{display:grid;grid-template-columns:1.5fr .8fr .8fr .8fr;align-items:center;min-width:620px;padding:10px 12px;border-top:1px solid rgba(124,108,255,.13);font-size:11px}.sd-row:first-child{border-top:0}.sd-row.head{background:#111744;color:#8E9ABB;font-weight:800}.sd-row small{display:block;color:#7785A5;font-size:9px;margin-top:2px}.sd-row .free{color:#C6F521}.sd-row .nm b{color:#F5F7FF}.no{color:#AAB5CA}.free{color:#C6F521}.okBadge{flex:0 0 auto}
 @media(max-width:900px){.pd-layout,.cartGrid,.infoLayout{grid-template-columns:1fr}.hm-stats{grid-template-columns:repeat(2,1fr)}.revGrid,.infoTiles{grid-template-columns:1fr 1fr}.cht{grid-template-columns:1fr;min-height:0}.cht-box{min-height:560px}.cht-list{min-height:0}.cht-threads{grid-template-columns:repeat(2,1fr)}.supGrid{grid-template-columns:1fr}.acc-hero{align-items:flex-start;flex-direction:column}.shopGrid{grid-template-columns:1fr}}
 @media(max-width:640px){.pd-specs,.payGrid,.revGrid,.infoTiles{grid-template-columns:1fr}.pd-btns{grid-template-columns:1fr}.cartRow{grid-template-columns:75px 1fr}.cartArt{width:75px;height:43px}.cartRow .qty{grid-column:2;justify-self:start}.cartSum{grid-column:2;display:flex;justify-content:space-between;width:100%;align-items:center}.acc-order{grid-template-columns:70px 1fr}.acc-orderArt{width:70px}.acc-orderRight{grid-column:2;justify-items:start}.keyRow{grid-template-columns:70px 1fr}.keyRow .px-btn{grid-column:2}.cht-threads{grid-template-columns:1fr}.cht-head .btn{padding:0 9px}.supCard{grid-template-columns:28px 1fr;align-items:start}.supCard .btn,.supCard .px-btn{grid-column:2;justify-self:start}.supStats{gap:8px}.infoLayout{gap:10px}.authCard{margin:10px 0}.authBtns{justify-content:stretch}.authBtns .btn,.authBtns .px-btn{flex:1}.sd-row{min-width:560px}}
+
+/* ===== GAME CARD IMAGE / TITLE FIT FIX ===== */
+.gameGrid{align-items:stretch}
+.gameCard{
+  display:flex!important;
+  flex-direction:column!important;
+  min-width:0!important;
+  height:100%!important;
+  overflow:hidden!important;
+}
+.gameCover{
+  width:100%!important;
+  aspect-ratio:16/9!important;
+  height:auto!important;
+  flex:0 0 auto!important;
+  overflow:hidden!important;
+}
+.gameCover img{
+  width:100%!important;
+  height:100%!important;
+  display:block!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+.gameBody{
+  min-width:0!important;
+  min-height:118px!important;
+  flex:1 1 auto!important;
+  display:flex!important;
+  flex-direction:column!important;
+  gap:7px!important;
+}
+.gameTitle{
+  min-width:0!important;
+  max-width:100%!important;
+  line-height:1.25!important;
+  white-space:normal!important;
+  overflow:hidden!important;
+  display:-webkit-box!important;
+  -webkit-box-orient:vertical!important;
+  -webkit-line-clamp:2!important;
+  text-overflow:ellipsis!important;
+  overflow-wrap:anywhere!important;
+  word-break:break-word!important;
+}
+.gameMeta{
+  min-width:0!important;
+  overflow:hidden!important;
+  white-space:nowrap!important;
+}
+.gameMeta .mPlat{
+  min-width:0!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+}
+.gameBottom{
+  margin-top:auto!important;
+  min-width:0!important;
+}
+.gamePrice{min-width:0;white-space:nowrap}
+.gameBuy{flex:0 0 36px!important}
+@media(min-width:1100px){
+  .gameGrid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+}
+@media(max-width:1099px) and (min-width:761px){
+  .gameGrid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+@media(max-width:760px){
+  .gameGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .gameBody{min-height:112px!important;padding:10px!important}
+  .gameTitle{font-size:13px!important}
+  .gameMeta{font-size:10px!important}
+}
