@@ -1133,3 +1133,23 @@ body{padding-bottom:70px}
   transform:scale(1.015)!important;
   transform-origin:center!important;
 }
+
+/* ===== GAME CARD INNER SAFE AREA ===== */
+.gameCard .gameBody{
+  position:relative!important;
+  z-index:4!important;
+  padding:14px 16px 15px!important;
+  min-width:0!important;
+}
+.gameCard .gameTitle{
+  padding-right:2px!important;
+  min-width:0!important;
+}
+.gameCard .gameMeta,
+.gameCard .gameBottom{
+  padding-left:0!important;
+  padding-right:0!important;
+}
+@media(max-width:760px){
+  .gameCard .gameBody{padding:12px 14px 13px!important}
+}
